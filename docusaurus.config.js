@@ -97,7 +97,7 @@ const config = {
         title: 'My Site',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/wood-1FAB5.svg',
         },
         items: [
           {
@@ -108,7 +108,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/uuoocl',
             label: 'GitHub',
             position: 'right',
           },

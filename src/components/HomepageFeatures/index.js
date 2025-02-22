@@ -4,11 +4,11 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Ideas',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Projects worth sharing',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Projects waiting to get some attention.
+        Hello World! These Projects are ready for sharing.
       </>
     ),
   },
@@ -22,11 +22,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Projects worth sharing',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Ideas',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Hello World! These Projects are ready for sharing.
+        Projects waiting to get some attention.
       </>
     ),
   },
