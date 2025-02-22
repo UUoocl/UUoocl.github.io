@@ -130,6 +130,10 @@ const config = {
             title: 'Community',
             items: [
               {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/jonathan-wood-b98a381b5',
+              },
+              {
                 label: 'Github',
                 href: 'https://github.com/uuoocl',
               },
