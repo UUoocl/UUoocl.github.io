@@ -1,8 +1,8 @@
 {
-  "label": "Project Ideas",
+  "label": "Shareable Projects",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Projects waiting to get some attention."
+    "description": "Projects ready to share. "
   }
 }

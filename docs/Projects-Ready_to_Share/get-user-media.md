@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Get User Media
 
-Use Get User Media (GUM) 
+Get User Media (GUM) for OBS  
 The OBS Browser Source doesn't support direct access to media like Camera, Microphone, Desktop Capture, Midi and Game Controllers. 
 The Get User Media for OBS sends media from a Chrome Browser to the OBS Browser source. 
 ```mermaid
@@ -50,7 +50,7 @@ Open [OBS](https://obsproject.com/).
 
 ### Connect to the OBS WebSocket Server
 
-![image](https://github.com/OBSGUM/obsgum.github.io/assets/169208894/9d4747c9-7c7e-4d0e-96f2-f1e5b0290cd9) 
+![image](./img/gumConnectForm.png) 
 
 On the GUM for OBS page enter the OBS WebSocket Server details in the IP address, Port Number and Password fields. 
 Click the "Connect to OBS" button.  If the connection is successful the button color will turn to green. 
@@ -178,17 +178,6 @@ sequenceDiagram
 |7 - left ear |17 - left pinky|27 - left ankle|
 |8 - right ear |18 - right pinky|28 - right ankle|
 |9 - mouth (left) |19 - left index|29 - left heel|
-
-
-
-
-
-
-
-
-
-
-
 
 
 ### Output Message
