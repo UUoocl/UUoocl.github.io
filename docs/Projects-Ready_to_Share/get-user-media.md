@@ -35,7 +35,7 @@ end
 ```
 
 ## Getting Started
-Open [GUM for OBS](https://obsgum.github.io/) in a Chrome browser.  
+Open [GUM for OBS](https://uuoocl.github.io/GUM) in a Chrome browser.  
 Optionally, download and run GUM for OBS locally.  
 > :memo: **Note:** The WebSpeech API doesn't work off-line. The WebSpeech API is used for Speech Recognition. Google annouced at [I/O 2024 that local off-line WebSpeech is coming soon](https://youtu.be/PJm8WNajZtw?si=tW8ZtjAnWwvGxFt8&t=1873).
 
