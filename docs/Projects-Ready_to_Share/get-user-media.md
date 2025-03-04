@@ -646,27 +646,6 @@ Object
 }
 ```
 
-## MediaPipe Gemma LLM Inference
-
-### Output Message
-**Message name:** 
-
-**Event listener example**
-```javascript
-window.addEventListener("message", function (event) {
-    //Do Something
-  });
-```
-
-**Event data**
- 
-Object 
-```JSON
-{
-
-}
-```
-
 ## WebRTC Audio Video
 
 ### Output Message
