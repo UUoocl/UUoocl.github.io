@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/untitled/untitled/"}
+{"dg-publish":true,"permalink":"/untitled/untitled/","noteIcon":""}
 ---
 
-note2
+note2. [[Welcome\|Welcome]]
