@@ -1,7 +1,15 @@
 [
 {
+		"title": "Untitled",
+		"date":"Mon Jun 23 2025 02:19:57 GMT+0000 (Coordinated Universal Time)",
+		"url":"/untitled/untitled/",
+		"content": "note2",
+		"tags": [ "note"]
+},
+
+{
 		"title": "Welcome",
-		"date":"Mon Jun 23 2025 02:19:02 GMT+0000 (Coordinated Universal Time)",
+		"date":"Mon Jun 23 2025 02:19:57 GMT+0000 (Coordinated Universal Time)",
 		"url":"/",
 		"content": "This is your new vault.\nMake a note of something, <a class=\"internal-link is-unresolved\" href=\"/404\" target=\"\">create a link</a>, or try the Importer!\nWhen you're ready, delete this note and make the vault your own.",
 		"tags": [ "note","gardenEntry"]
