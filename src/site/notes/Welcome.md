@@ -2,6 +2,8 @@
 {"dg-publish":true,"permalink":"/welcome/","tags":["gardenEntry"]}
 ---
 
+# page name
+
 
 This is your new *vault*.
 
