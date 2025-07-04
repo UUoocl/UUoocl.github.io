@@ -1,25 +1,33 @@
 [
 {
-		"title": "Getting Started",
-		"date":"Fri Jul 04 2025 00:47:25 GMT+0000 (Coordinated Universal Time)",
-		"url":"/projects/getting-started/",
-		"content": "New gile",
-		"tags": [ "note"]
-},
-
-{
 		"title": "Slides Studio",
-		"date":"Fri Jul 04 2025 00:47:25 GMT+0000 (Coordinated Universal Time)",
+		"date":"Fri Jul 04 2025 00:59:06 GMT+0000 (Coordinated Universal Time)",
 		"url":"/projects/slides-studio/",
 		"content": "note2. <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/\">Welcome</a>",
 		"tags": [ "note"]
 },
 
 {
+		"title": "Getting Started",
+		"date":"Fri Jul 04 2025 00:59:06 GMT+0000 (Coordinated Universal Time)",
+		"url":"/projects/slides-studio/getting-started/",
+		"content": "New gile",
+		"tags": [ "note"]
+},
+
+{
+		"title": "Slides Studio",
+		"date":"Fri Jul 04 2025 00:59:06 GMT+0000 (Coordinated Universal Time)",
+		"url":"/projects/slides-studio/slides-studio/",
+		"content": "note2. <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/\">Welcome</a>",
+		"tags": [ "note"]
+},
+
+{
 		"title": "Welcome",
-		"date":"Fri Jul 04 2025 00:47:25 GMT+0000 (Coordinated Universal Time)",
+		"date":"Fri Jul 04 2025 00:59:06 GMT+0000 (Coordinated Universal Time)",
 		"url":"/",
-		"content": "",
+		"content": "Projects\n<a class=\"internal-link is-unresolved\" href=\"/404\" target=\"\"> Slides Studio</a> - An Obsidian plug in to choreograph OBS scene changes and Slides Extended presentations.",
 		"tags": [ "note","gardenEntry"]
 }
 ]
