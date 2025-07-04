@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Welcome</title>
+<title>1.01 Getting Started</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -42,7 +42,7 @@
 </a>
 <div class="folder" x-data="{isOpen: true}">
 <div x-show="isOpen" style="display:none" class="">
-<div @click.stop class="notelink active-note"><a data-note-icon="" style="text-decoration:none" class="filename" href="/">Welcome </a>
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/">Welcome </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="">
@@ -90,7 +90,7 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/1-01-getting-started/">1.01 Getting Started </a>
+<div @click.stop class="notelink active-note"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/1-01-getting-started/">1.01 Getting Started </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -106,14 +106,51 @@
 </div>
 <main class="content cm-s-obsidian">
 <header>
-<h1></h1>
+<h1 data-note-icon="">1.01 Getting Started</h1>
 <div class="header-meta">
 <div class="header-tags">
 </div>
 </div>
 </header>
-<h1 id="projects" tabindex="-1">Projects</h1>
-<p><a class="internal-link" target="" data-note-icon="" href="/tutorials/slides-studio/1-01-getting-started/"> Slides Studio</a> - An Obsidian plug in to choreograph OBS scene changes and Slides Extended presentations.</p>
+<h1 id="system-configuration" tabindex="-1">System Configuration</h1>
+<p>Download the required applications and plugins</p>
+<ul>
+<li><a href="https://obsproject.com/" target="_blank" class="external-link">Open Broadcast Studio</a> Free and Open Source software for video recording and live streaming.</li>
+<li><a href="https://obsidian.md/" target="_blank" class="external-link">Obsidian</a> Free tool for organizing notes.
+<ul>
+<li><a href="https://github.com/ebullient/obsidian-slides-extended" target="_blank" class="external-link">Slides Extended</a> a plugin to create Reveal js slides in Markdown syntax</li>
+<li>Slides Studio</li>
+</ul>
+</li>
+</ul>
+<h2 id="install-applications" tabindex="-1">Install applications</h2>
+<p>Use the installers for <strong>OBS</strong> and <strong>Obsidian</strong>.</p>
+<p><strong>Slides Extended</strong> is installed through the Obsidian Community plugin store.</p>
+<ol>
+<li>Open Obsidian and go to <code>Settings</code>.</li>
+<li>Click on <code>Community Plugins</code>.</li>
+<li>Make sure &quot;Safe Mode&quot; is turned off.</li>
+<li>Click on <code>Browse</code>.</li>
+<li>Search for <code>Slides Extended</code>.</li>
+<li>Click <code>Install</code> on the <code>Slides Extended</code> plugin.</li>
+<li>After installation, make sure to enable the plugin by toggling it on in the <code>Installed Plugins</code> section.</li>
+</ol>
+<p><strong>Slides Studio</strong> plugin has not been submitted to the Community plugins yet.<br>
+To manually install the plugin</p>
+<ol>
+<li>Download the latest release from .</li>
+<li>In Obsidian, open your vault's root folder in your file explorer.</li>
+<li>Navigate to the <code>.obsidian/plugins</code> directory. If it doesn't exist, create it.
+<ol>
+<li>this folder is hidden in macOS, press 'command + shift + . ' to see it.</li>
+</ol>
+</li>
+<li>Extract the contents of the downloaded <code>.zip</code> file into a new folder within the <code>plugins</code> directory.</li>
+<li>Copy the file <code>manifest.json</code> and <code>main.js</code>into the folder <code>slides-studio</code>.</li>
+<li>Restart Obsidian or reload your vault.</li>
+<li>Go to <code>Settings</code> &gt; <code>Community Plugins</code> and make sure &quot;Safe Mode&quot; is turned off.</li>
+<li>Click on <code>Browse</code> under <code>Community Plugins</code>, find <code>Obsidian Slides Studio</code>, and enable it.</li>
+</ol>
 </main>
 <aside>
 <div class="sidebar">
@@ -127,7 +164,11 @@ On this page
 <div class="toc-container">
 <nav class="toc">
 <ol>
-<li><a href="#projects">Projects</a>
+<li><a href="#system-configuration">System Configuration</a>
+<ol>
+<li><a href="#install-applications">Install applications</a>
+</li>
+</ol>
 </li>
 </ol>
 </nav>
@@ -136,6 +177,9 @@ On this page
 </div>
 </div>
 </aside>
+<script>window.location.hash&&document.getElementById(window.location.hash.slice(1)).classList.add("referred"),window.addEventListener("hashchange",(e=>{const t=e.oldURL.split("#");t[1]&&document.getElementById(t[1]).classList.remove("referred");const n=e.newURL.split("#");n[1]&&document.getElementById(n[1]).classList.add("referred")}),!1);const url_parts=window.location.href.split("#"),url=url_parts[0],referrence=url_parts[1];document.querySelectorAll(".cm-s-obsidian > *[id]").forEach((function(e){e.ondblclick=function(e){const t=url+"#"+e.target.id;navigator.clipboard.writeText(t)}}))</script>
+<script src="https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
+<script defer="defer">TIMESTAMP_FORMAT="MMM dd, yyyy h:mm a",document.querySelectorAll(".human-date").forEach((function(e){date=e.getAttribute("data-date")||e.innerText,parsed_date=luxon.DateTime.fromISO(date),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromSQL(date)),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromHTML(date)),e.innerHTML=parsed_date.toFormat(TIMESTAMP_FORMAT)}))</script>
 <script>lucide.createIcons({attrs:{class:["svg-icon"]}})</script>
 </body>
 </html>
