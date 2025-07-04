@@ -1,7 +1,47 @@
 [
 {
+		"title": "01. Slides Studio",
+		"date":"Fri Jul 04 2025 03:44:28 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio/01-slides-studio/",
+		"content": "Slides Studio is an open source plugin that enables slide presentations created in Obsidian to control Open Broadcast Studio (OBS).\nThe plugin extends the features of the Slides Extended plugin.\n\nGetting started\n\n🔧 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/01-01-getting-started/\">System Configuration</a>\n🔌 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/01-02-slide-studio-settings/\">Connect Obsidian to OBS</a>\n🏷️ <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/01-04-play-presentation/\">Add Slide Control tags</a>\n🎬 Play a slides presentation",
+		"tags": [ "note"]
+},
+
+{
+		"title": "01.01 Getting Started",
+		"date":"Fri Jul 04 2025 03:44:28 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio/01-01-getting-started/",
+		"content": "System Setup\nDownload the required applications and plugins\n\nOpen Broadcast Studio Free and Open Source software for video recording and live streaming.\nObsidian Free tool for organizing notes.\n\nSlides Extended a plugin to create Reveal js slides in Markdown syntax\nSlides Studio\n\nInstallation\nUse the installers for OBS and Obsidian.\nSlides Extended is installed through the Obsidian Community plugin store.\n\nOpen Obsidian and go to Settings.\nClick on Community Plugins.\nMake sure &quot;Safe Mode&quot; is turned off.\nClick on Browse.\nSearch for Slides Extended.\nClick Install on the Slides Extended plugin.\nAfter installation, make sure to enable the plugin by toggling it on in the Installed Plugins section.\n\nSlides Studio plugin has not been submitted to the Obsidian Community plugins yet.\nTo manually install the plugin\n\nDownload the latest release from .\nIn Obsidian, open your vault's root folder in your file explorer.\nNavigate to the .obsidian/plugins directory. If it doesn't exist, create it.\n\nthis folder is hidden in macOS, press 'command + shift + . ' to see it.\n\nExtract the contents of the downloaded .zip file into a new folder within the plugins directory.\nCopy the file manifest.json and main.jsinto the folder slides-studio.\nRestart Obsidian or reload your vault.\nGo to Settings &gt; Community Plugins and make sure &quot;Safe Mode&quot; is turned off.\nClick on Browse under Community Plugins, find Obsidian Slides Studio, and enable it.",
+		"tags": [ "note"]
+},
+
+{
+		"title": "01.02 Slide Studio Settings",
+		"date":"Fri Jul 04 2025 03:44:28 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio/01-02-slide-studio-settings/",
+		"content": "OBS: Import the Slide Studio Collection\nConnecting Obsidian and OBS\nopen OBS\nConnect to OBS",
+		"tags": [ "note"]
+},
+
+{
+		"title": "01.03 Add Slide Control Tags",
+		"date":"Fri Jul 04 2025 03:44:28 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio/01-03-add-slide-control-tags/",
+		"content": "Camera Position Tags\nSlides Position Tags",
+		"tags": [ "note"]
+},
+
+{
+		"title": "01.04 Play Presentation",
+		"date":"Fri Jul 04 2025 03:44:28 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio/01-04-play-presentation/",
+		"content": "Slides Preview",
+		"tags": [ "note"]
+},
+
+{
 		"title": "1. Slides Studio",
-		"date":"Fri Jul 04 2025 03:28:20 GMT+0000 (Coordinated Universal Time)",
+		"date":"Fri Jul 04 2025 03:44:28 GMT+0000 (Coordinated Universal Time)",
 		"url":"/tutorials/slides-studio/1-slides-studio/",
 		"content": "Slides Studio is an open source plugin that enables slide presentations created in Obsidian to control Open Broadcast Studio (OBS).\nThe plugin extends the features of the Slides Extended plugin.\n\nGetting started\n\n🔧 <a class=\"internal-link is-unresolved\" href=\"/404\" target=\"\">System Configuration</a>\n🔌 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/1-02-connecting-obsidian-and-obs/\">Connect Obsidian to OBS</a>\n🏷️ Add control tags\n🎬 Play a slides presentation",
 		"tags": [ "note"]
@@ -9,7 +49,7 @@
 
 {
 		"title": "1.01 Getting Started",
-		"date":"Fri Jul 04 2025 03:28:20 GMT+0000 (Coordinated Universal Time)",
+		"date":"Fri Jul 04 2025 03:44:28 GMT+0000 (Coordinated Universal Time)",
 		"url":"/tutorials/slides-studio/1-01-getting-started/",
 		"content": "System Configuration\nDownload the required applications and plugins\n\nOpen Broadcast Studio Free and Open Source software for video recording and live streaming.\nObsidian Free tool for organizing notes.\n\nSlides Extended a plugin to create Reveal js slides in Markdown syntax\nSlides Studio\n\nInstall applications\nUse the installers for OBS and Obsidian.\nSlides Extended is installed through the Obsidian Community plugin store.\n\nOpen Obsidian and go to Settings.\nClick on Community Plugins.\nMake sure &quot;Safe Mode&quot; is turned off.\nClick on Browse.\nSearch for Slides Extended.\nClick Install on the Slides Extended plugin.\nAfter installation, make sure to enable the plugin by toggling it on in the Installed Plugins section.\n\nSlides Studio plugin has not been submitted to the Community plugins yet.\nTo manually install the plugin\n\nDownload the latest release from .\nIn Obsidian, open your vault's root folder in your file explorer.\nNavigate to the .obsidian/plugins directory. If it doesn't exist, create it.\n\nthis folder is hidden in macOS, press 'command + shift + . ' to see it.\n\nExtract the contents of the downloaded .zip file into a new folder within the plugins directory.\nCopy the file manifest.json and main.jsinto the folder slides-studio.\nRestart Obsidian or reload your vault.\nGo to Settings &gt; Community Plugins and make sure &quot;Safe Mode&quot; is turned off.\nClick on Browse under Community Plugins, find Obsidian Slides Studio, and enable it.",
 		"tags": [ "note"]
@@ -17,7 +57,7 @@
 
 {
 		"title": "1.02 Connecting Obsidian and OBS",
-		"date":"Fri Jul 04 2025 03:28:20 GMT+0000 (Coordinated Universal Time)",
+		"date":"Fri Jul 04 2025 03:44:28 GMT+0000 (Coordinated Universal Time)",
 		"url":"/tutorials/slides-studio/1-02-connecting-obsidian-and-obs/",
 		"content": "",
 		"tags": [ "note"]
@@ -25,9 +65,9 @@
 
 {
 		"title": "Welcome",
-		"date":"Fri Jul 04 2025 03:28:20 GMT+0000 (Coordinated Universal Time)",
+		"date":"Fri Jul 04 2025 03:44:28 GMT+0000 (Coordinated Universal Time)",
 		"url":"/",
-		"content": "Projects\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/1-01-getting-started/\"> Slides Studio</a> - An Obsidian plug in to choreograph OBS scene changes and Slides Extended presentations.",
+		"content": "Projects\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/01-slides-studio/\">Slides Studio</a> - An Obsidian plug in to choreograph OBS scene changes and Slides Extended presentations.",
 		"tags": [ "note","gardenEntry"]
 }
 ]

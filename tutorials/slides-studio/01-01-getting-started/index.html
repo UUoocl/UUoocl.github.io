@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>1. Slides Studio</title>
+<title>01.01 Getting Started</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -64,11 +64,11 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink active-note"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/1-slides-studio/">1. Slides Studio </a>
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/1-slides-studio/">1. Slides Studio </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-01-getting-started/">01.01 Getting Started </a>
+<div @click.stop class="notelink active-note"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-01-getting-started/">01.01 Getting Started </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -100,24 +100,51 @@
 </div>
 <main class="content cm-s-obsidian">
 <header>
-<h1 data-note-icon="">1. Slides Studio</h1>
+<h1 data-note-icon="">01.01 Getting Started</h1>
 <div class="header-meta">
 <div class="header-tags">
 </div>
 </div>
 </header>
-<p>Slides Studio is an open source plugin that enables slide presentations created in Obsidian to control Open Broadcast Studio (OBS).</p>
-<p>The plugin extends the features of the <a href="https://github.com/ebullient/obsidian-slides-extended" target="_blank" class="external-link">Slides Extended</a> plugin.</p>
-<p><picture src="/img/user/Excalidraw/Obsidain%20to%20OBS.excalidraw.png" alt="Obsidain to OBS.excalidraw.png"><source media="(max-width:480px)" srcset="/img/optimized/ntYq_-wDmZ-437.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/ntYq_-wDmZ-437.jpeg">
-<img class="" src="/img/user/Excalidraw/Obsidain%20to%20OBS.excalidraw.png" alt="Obsidain to OBS.excalidraw.png" width=""></picture></p>
-<h3 id="getting-started" tabindex="-1">Getting started</h3>
+<h1 id="system-setup" tabindex="-1">System Setup</h1>
+<p>Download the required applications and plugins</p>
 <ul>
-<li>🔧 <a class="internal-link is-unresolved" href="/404" target="">System Configuration</a></li>
-<li>🔌 <a class="internal-link" target="" data-note-icon="" href="/tutorials/slides-studio/1-02-connecting-obsidian-and-obs/">Connect Obsidian to OBS</a></li>
-<li>🏷️ Add control tags</li>
-<li>🎬 Play a slides presentation</li>
+<li><a href="https://obsproject.com/" target="_blank" class="external-link">Open Broadcast Studio</a> Free and Open Source software for video recording and live streaming.</li>
+<li><a href="https://obsidian.md/" target="_blank" class="external-link">Obsidian</a> Free tool for organizing notes.
+<ul>
+<li><a href="https://github.com/ebullient/obsidian-slides-extended" target="_blank" class="external-link">Slides Extended</a> a plugin to create Reveal js slides in Markdown syntax</li>
+<li>Slides Studio</li>
 </ul>
+</li>
+</ul>
+<h2 id="installation" tabindex="-1">Installation</h2>
+<p>Use the installers for <strong>OBS</strong> and <strong>Obsidian</strong>.</p>
+<p><strong>Slides Extended</strong> is installed through the Obsidian Community plugin store.</p>
+<ol>
+<li>Open Obsidian and go to <code>Settings</code>.</li>
+<li>Click on <code>Community Plugins</code>.</li>
+<li>Make sure &quot;Safe Mode&quot; is turned off.</li>
+<li>Click on <code>Browse</code>.</li>
+<li>Search for <code>Slides Extended</code>.</li>
+<li>Click <code>Install</code> on the <code>Slides Extended</code> plugin.</li>
+<li>After installation, make sure to enable the plugin by toggling it on in the <code>Installed Plugins</code> section.</li>
+</ol>
+<p><strong>Slides Studio</strong> plugin has not been submitted to the Obsidian Community plugins yet.<br>
+To manually install the plugin</p>
+<ol>
+<li>Download the latest release from .</li>
+<li>In Obsidian, open your vault's root folder in your file explorer.</li>
+<li>Navigate to the <code>.obsidian/plugins</code> directory. If it doesn't exist, create it.
+<ol>
+<li>this folder is hidden in macOS, press 'command + shift + . ' to see it.</li>
+</ol>
+</li>
+<li>Extract the contents of the downloaded <code>.zip</code> file into a new folder within the <code>plugins</code> directory.</li>
+<li>Copy the file <code>manifest.json</code> and <code>main.js</code>into the folder <code>slides-studio</code>.</li>
+<li>Restart Obsidian or reload your vault.</li>
+<li>Go to <code>Settings</code> &gt; <code>Community Plugins</code> and make sure &quot;Safe Mode&quot; is turned off.</li>
+<li>Click on <code>Browse</code> under <code>Community Plugins</code>, find <code>Obsidian Slides Studio</code>, and enable it.</li>
+</ol>
 </main>
 <aside>
 <div class="sidebar">
@@ -131,7 +158,11 @@ On this page
 <div class="toc-container">
 <nav class="toc">
 <ol>
-<li><a href="#getting-started">Getting started</a>
+<li><a href="#system-setup">System Setup</a>
+<ol>
+<li><a href="#installation">Installation</a>
+</li>
+</ol>
 </li>
 </ol>
 </nav>
