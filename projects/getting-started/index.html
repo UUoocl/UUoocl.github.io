@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Untitled</title>
+<title>Getting Started</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -42,6 +42,23 @@
 </a>
 <div class="folder" x-data="{isOpen: true}">
 <div x-show="isOpen" style="display:none" class="">
+<div class="folder inner-folder" x-data="{isOpen: $persist(false).as('Projects')}" @click.stop="isOpen=!isOpen">
+<div class="foldername-wrapper align-icon">
+<i x-show="isOpen" style="display:none" icon-name="chevron-down"></i>
+<i x-show="!isOpen" icon-name="chevron-right"></i>
+<span class="foldername">Projects</span>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink active-note"><a data-note-icon="" style="text-decoration:none" class="filename" href="/projects/getting-started/">Getting Started </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/projects/slides-studio/">Slides Studio </a>
+</div>
+</div>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="">
 <div class="folder inner-folder" x-data="{isOpen: $persist(false).as('Untitled')}" @click.stop="isOpen=!isOpen">
 <div class="foldername-wrapper align-icon">
 <i x-show="isOpen" style="display:none" icon-name="chevron-down"></i>
@@ -55,10 +72,6 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="">
-<div @click.stop class="notelink active-note"><a data-note-icon="" style="text-decoration:none" class="filename" href="/untitled/">Untitled </a>
-</div>
-</div>
-<div x-show="isOpen" style="display:none" class="">
 <div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/">Welcome </a>
 </div>
 </div>
@@ -67,7 +80,7 @@
 </div>
 <main class="content cm-s-obsidian">
 <header>
-<h1 data-note-icon="">Untitled</h1>
+<h1 data-note-icon="">Getting Started</h1>
 <div class="header-meta">
 <div class="header-tags">
 </div>
