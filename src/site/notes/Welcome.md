@@ -4,7 +4,7 @@
 
 # Projects
 
-[[Tutorials/Slides Studio/01. Slides Studio\|Slides Studio]] - An Obsidian plug in to choreograph OBS scene changes and Slides Extended presentations. 
+[[Tutorials/Slides Studio Plugin/01. Slides Studio Plugin\|Slides Studio]] - An Obsidian plug in to choreograph OBS scene changes and Slides Extended presentations. 
 
 
 
