@@ -72,11 +72,44 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-03-add-slide-control-tags/">01.03 Add Slide Control Tags </a>
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-03-add-slide-control-tags/">My Custom Title </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
 <div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-04-play-presentation/">01.04 Play Presentation </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-05-teleprompter/">01.05 Teleprompter </a>
+</div>
+</div>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div class="folder inner-folder" x-data="{isOpen: $persist(false).as('Tutorials/Slides Studio Plugin')}" @click.stop="isOpen=!isOpen">
+<div class="foldername-wrapper align-icon">
+<i x-show="isOpen" style="display:none" icon-name="chevron-down"></i>
+<i x-show="!isOpen" icon-name="chevron-right"></i>
+<span class="foldername">Slides Studio Plugin</span>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio-plugin/01-slides-studio-plugin/">01. Slides Studio Plugin </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio-plugin/01-01-getting-started/">01.01 Getting Started </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio-plugin/01-02-slide-studio-settings/">01.02 Slide Studio Settings </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio-plugin/01-03-add-slide-control-tags/">My Custom Title </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio-plugin/01-04-play-presentation/">01.04 Play Presentation </a>
 </div>
 </div>
 </div>
@@ -94,45 +127,13 @@
 </div>
 </div>
 </header>
-<h1 id="system-setup" tabindex="-1">System Setup</h1>
-<p>Download the required applications and plugins</p>
+<h1 id="requirements" tabindex="-1">Requirements</h1>
+<p>A <a href="http://Slides.com" target="_blank" class="external-link">Slides.com</a> presentation link<br>
+Optionally, create a <a href="http://Slides.com" target="_blank" class="external-link">Slides.com</a> account (starting at $5 usd per month) to create your own presentations.</p>
+<p>Download</p>
 <ul>
 <li><a href="https://obsproject.com/" target="_blank" class="external-link">Open Broadcast Studio</a> Free and Open Source software for video recording and live streaming.</li>
-<li><a href="https://obsidian.md/" target="_blank" class="external-link">Obsidian</a> Free tool for organizing notes.
-<ul>
-<li><a href="https://github.com/ebullient/obsidian-slides-extended" target="_blank" class="external-link">Slides Extended</a> a plugin to create Reveal js slides in Markdown syntax</li>
-<li>Slides Studio</li>
 </ul>
-</li>
-</ul>
-<h2 id="installation" tabindex="-1">Installation</h2>
-<p>Use the installers for <strong>OBS</strong> and <strong>Obsidian</strong>.</p>
-<p><strong>Slides Extended</strong> is installed through the Obsidian Community plugin store.</p>
-<ol>
-<li>Open Obsidian and go to <code>Settings</code>.</li>
-<li>Click on <code>Community Plugins</code>.</li>
-<li>Make sure &quot;Safe Mode&quot; is turned off.</li>
-<li>Click on <code>Browse</code>.</li>
-<li>Search for <code>Slides Extended</code>.</li>
-<li>Click <code>Install</code> on the <code>Slides Extended</code> plugin.</li>
-<li>After installation, make sure to enable the plugin by toggling it on in the <code>Installed Plugins</code> section.</li>
-</ol>
-<p><strong>Slides Studio</strong> plugin has not been submitted to the Obsidian Community plugins yet.<br>
-To manually install the plugin</p>
-<ol>
-<li>Download the latest release from .</li>
-<li>In Obsidian, open your vault's root folder in your file explorer.</li>
-<li>Navigate to the <code>.obsidian/plugins</code> directory. If it doesn't exist, create it.
-<ol>
-<li>this folder is hidden in macOS, press 'command + shift + . ' to see it.</li>
-</ol>
-</li>
-<li>Extract the contents of the downloaded <code>.zip</code> file into a new folder within the <code>plugins</code> directory.</li>
-<li>Copy the file <code>manifest.json</code> and <code>main.js</code>into the folder <code>slides-studio</code>.</li>
-<li>Restart Obsidian or reload your vault.</li>
-<li>Go to <code>Settings</code> &gt; <code>Community Plugins</code> and make sure &quot;Safe Mode&quot; is turned off.</li>
-<li>Click on <code>Browse</code> under <code>Community Plugins</code>, find <code>Obsidian Slides Studio</code>, and enable it.</li>
-</ol>
 </main>
 <aside>
 <div class="sidebar">
@@ -146,11 +147,7 @@ On this page
 <div class="toc-container">
 <nav class="toc">
 <ol>
-<li><a href="#system-setup">System Setup</a>
-<ol>
-<li><a href="#installation">Installation</a>
-</li>
-</ol>
+<li><a href="#requirements">Requirements</a>
 </li>
 </ol>
 </nav>

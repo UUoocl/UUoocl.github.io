@@ -1,49 +1,97 @@
 [
 {
-		"title": "01. Slides Studio",
-		"date":"Fri Jul 04 2025 03:44:46 GMT+0000 (Coordinated Universal Time)",
-		"url":"/tutorials/slides-studio/01-slides-studio/",
-		"content": "Slides Studio is an open source plugin that enables slide presentations created in Obsidian to control Open Broadcast Studio (OBS).\nThe plugin extends the features of the Slides Extended plugin.\n\nGetting started\n\n🔧 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/01-01-getting-started/\">System Configuration</a>\n🔌 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/01-02-slide-studio-settings/\">Connect Obsidian to OBS</a>\n🏷️ <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/01-04-play-presentation/\">Add Slide Control tags</a>\n🎬 Play a slides presentation",
+		"title": "01. Slides Studio Plugin",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio-plugin/01-slides-studio-plugin/",
+		"content": "Slides Studio is an open source plugin that enables slide presentations created in Obsidian to control Open Broadcast Studio (OBS).\nThe plugin extends the features of the Slides Extended plugin.\n\nGetting started\n\n🔧 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio-plugin/01-01-getting-started/\">System Configuration</a>\n🔌 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio-plugin/01-02-slide-studio-settings/\">Connect Obsidian to OBS</a>\n🏷️ <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio-plugin/01-04-play-presentation/\">Add Slide Control tags</a>\n🎬 Play a slides presentation",
 		"tags": [ "note"]
 },
 
 {
 		"title": "01.01 Getting Started",
-		"date":"Fri Jul 04 2025 03:44:46 GMT+0000 (Coordinated Universal Time)",
-		"url":"/tutorials/slides-studio/01-01-getting-started/",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio-plugin/01-01-getting-started/",
 		"content": "System Setup\nDownload the required applications and plugins\n\nOpen Broadcast Studio Free and Open Source software for video recording and live streaming.\nObsidian Free tool for organizing notes.\n\nSlides Extended a plugin to create Reveal js slides in Markdown syntax\nSlides Studio\n\nInstallation\nUse the installers for OBS and Obsidian.\nSlides Extended is installed through the Obsidian Community plugin store.\n\nOpen Obsidian and go to Settings.\nClick on Community Plugins.\nMake sure &quot;Safe Mode&quot; is turned off.\nClick on Browse.\nSearch for Slides Extended.\nClick Install on the Slides Extended plugin.\nAfter installation, make sure to enable the plugin by toggling it on in the Installed Plugins section.\n\nSlides Studio plugin has not been submitted to the Obsidian Community plugins yet.\nTo manually install the plugin\n\nDownload the latest release from .\nIn Obsidian, open your vault's root folder in your file explorer.\nNavigate to the .obsidian/plugins directory. If it doesn't exist, create it.\n\nthis folder is hidden in macOS, press 'command + shift + . ' to see it.\n\nExtract the contents of the downloaded .zip file into a new folder within the plugins directory.\nCopy the file manifest.json and main.jsinto the folder slides-studio.\nRestart Obsidian or reload your vault.\nGo to Settings &gt; Community Plugins and make sure &quot;Safe Mode&quot; is turned off.\nClick on Browse under Community Plugins, find Obsidian Slides Studio, and enable it.",
 		"tags": [ "note"]
 },
 
 {
 		"title": "01.02 Slide Studio Settings",
-		"date":"Fri Jul 04 2025 03:44:46 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio-plugin/01-02-slide-studio-settings/",
+		"content": "OBS: Import the Slide Studio Collection\nConnecting Obsidian and OBS\nopen OBS\nConnect to OBS",
+		"tags": [ "note"]
+},
+
+{
+		"title": "My Custom Title",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio-plugin/01-03-add-slide-control-tags/",
+		"content": "#slide-studio\nCamera Position Tags\nSlides Position Tags",
+		"tags": ["slide-studio", "note"]
+},
+
+{
+		"title": "01.04 Play Presentation",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio-plugin/01-04-play-presentation/",
+		"content": "Slides Preview",
+		"tags": [ "note"]
+},
+
+{
+		"title": "01. Slides Studio",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio/01-slides-studio/",
+		"content": "Slides Studio is a github page that enables slides.com presentations to control Open Broadcast Studio (OBS).\n\nGetting started\n\n🔧 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/01-01-getting-started/\">System Configuration</a>\n🔌 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/01-02-slide-studio-settings/\">Connect Obsidian to OBS</a>\n🏷️ <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/01-04-play-presentation/\">Add Slide Control tags</a>\n🎬 Play a slides presentation",
+		"tags": [ "note"]
+},
+
+{
+		"title": "01.01 Getting Started",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio/01-01-getting-started/",
+		"content": "Requirements\nA Slides.com presentation link\nOptionally, create a Slides.com account (starting at $5 usd per month) to create your own presentations.\nDownload\n\nOpen Broadcast Studio Free and Open Source software for video recording and live streaming.",
+		"tags": [ "note"]
+},
+
+{
+		"title": "01.02 Slide Studio Settings",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
 		"url":"/tutorials/slides-studio/01-02-slide-studio-settings/",
 		"content": "OBS: Import the Slide Studio Collection\nConnecting Obsidian and OBS\nopen OBS\nConnect to OBS",
 		"tags": [ "note"]
 },
 
 {
-		"title": "01.03 Add Slide Control Tags",
-		"date":"Fri Jul 04 2025 03:44:46 GMT+0000 (Coordinated Universal Time)",
+		"title": "My Custom Title",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
 		"url":"/tutorials/slides-studio/01-03-add-slide-control-tags/",
-		"content": "Camera Position Tags\nSlides Position Tags",
-		"tags": [ "note"]
+		"content": "#slide-studio\nCamera Position Tags\nSlides Position Tags",
+		"tags": ["slide-studio", "note"]
 },
 
 {
 		"title": "01.04 Play Presentation",
-		"date":"Fri Jul 04 2025 03:44:46 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
 		"url":"/tutorials/slides-studio/01-04-play-presentation/",
 		"content": "Slides Preview",
 		"tags": [ "note"]
 },
 
 {
+		"title": "01.05 Teleprompter",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
+		"url":"/tutorials/slides-studio/01-05-teleprompter/",
+		"content": "Add notes to slide\nAdjust teleprompter settings",
+		"tags": [ "note"]
+},
+
+{
 		"title": "Welcome",
-		"date":"Fri Jul 04 2025 03:44:46 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Jul 22 2025 02:32:56 GMT+0000 (Coordinated Universal Time)",
 		"url":"/",
-		"content": "Projects\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio/01-slides-studio/\">Slides Studio</a> - An Obsidian plug in to choreograph OBS scene changes and Slides Extended presentations.",
+		"content": "Projects\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/tutorials/slides-studio-plugin/01-slides-studio-plugin/\">Slides Studio</a> - An Obsidian plug in to choreograph OBS scene changes and Slides Extended presentations.",
 		"tags": [ "note","gardenEntry"]
 }
 ]

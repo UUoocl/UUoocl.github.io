@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>01.03 Add Slide Control Tags</title>
+<title>My Custom Title</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -72,11 +72,44 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink active-note"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-03-add-slide-control-tags/">01.03 Add Slide Control Tags </a>
+<div @click.stop class="notelink active-note"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-03-add-slide-control-tags/">My Custom Title </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
 <div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-04-play-presentation/">01.04 Play Presentation </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-05-teleprompter/">01.05 Teleprompter </a>
+</div>
+</div>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div class="folder inner-folder" x-data="{isOpen: $persist(false).as('Tutorials/Slides Studio Plugin')}" @click.stop="isOpen=!isOpen">
+<div class="foldername-wrapper align-icon">
+<i x-show="isOpen" style="display:none" icon-name="chevron-down"></i>
+<i x-show="!isOpen" icon-name="chevron-right"></i>
+<span class="foldername">Slides Studio Plugin</span>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio-plugin/01-slides-studio-plugin/">01. Slides Studio Plugin </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio-plugin/01-01-getting-started/">01.01 Getting Started </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio-plugin/01-02-slide-studio-settings/">01.02 Slide Studio Settings </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio-plugin/01-03-add-slide-control-tags/">My Custom Title </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio-plugin/01-04-play-presentation/">01.04 Play Presentation </a>
 </div>
 </div>
 </div>
@@ -88,12 +121,13 @@
 </div>
 <main class="content cm-s-obsidian">
 <header>
-<h1 data-note-icon="">01.03 Add Slide Control Tags</h1>
+<h1 data-note-icon="">My Custom Title</h1>
 <div class="header-meta">
 <div class="header-tags">
 </div>
 </div>
 </header>
+<p><a class="tag" onclick="toggleTagSearch(this)" data-content="#slide-studio">#slide-studio</a></p>
 <h2 id="camera-position-tags" tabindex="-1">Camera Position Tags</h2>
 <h2 id="slides-position-tags" tabindex="-1">Slides Position Tags</h2>
 </main>
