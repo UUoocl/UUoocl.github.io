@@ -8,6 +8,7 @@
 
 [[Tutorials/Slides Studio Plugin/01. Slides Studio Plugin\|Slides Studio Plugin]] - An Obsidian plug in to manage OBS Scene changes with Slides Extended plugin presentations.
 
+[[Tutorials/\|Tutorials/]] - An Obsidian plug in to manage OBS Scene changes with Slides Extended plugin presentations.
 
 
 
