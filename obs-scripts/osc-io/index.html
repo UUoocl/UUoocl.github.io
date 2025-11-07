@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Play Presentation</title>
+<title>OSC io</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -91,7 +91,7 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/obs-scripts/osc-io/">OSC io </a>
+<div @click.stop class="notelink active-note"><a data-note-icon="" style="text-decoration:none" class="filename" href="/obs-scripts/osc-io/">OSC io </a>
 </div>
 </div>
 </div>
@@ -140,7 +140,7 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink active-note"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-04-play-presentation/">Play Presentation </a>
+<div @click.stop class="notelink"><a data-note-icon="" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-04-play-presentation/">Play Presentation </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -189,22 +189,120 @@
 </div>
 <main class="content cm-s-obsidian">
 <header>
-<h1 data-note-icon="">Play Presentation</h1>
+<h1 data-note-icon="">OSC io</h1>
 <div class="header-meta">
 <div class="header-tags">
 </div>
-<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-07-21T21:42:28.610-04:00"></span></div></div></div>
+<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-11-06T20:51:37.367-05:00"></span></div></div></div>
 </header>
-<h2 id="navigating-slides" tabindex="-1">Navigating Slides</h2>
-<h3 id="1-current-slide-navigation" tabindex="-1">1. Current Slide navigation</h3>
-<p>Click the &quot;&gt;&quot; button to advance to the next slide, or the &quot;&lt;&quot; button to return to the previous slide.</p>
-<p>The keyboard keys left and right arrow keys can navigate the slides forward and back.</p>
-<h3 id="2-slide-tags-navigation" tabindex="-1">2. Slide tags navigation</h3>
-<p>Click on the slide number in the &quot;Index&quot; column to jump to a specific slide.</p>
-<p>Press the keyboard &quot;spacebar&quot; key to advance to the next slide.</p>
-<p><picture src="/img/user/Excalidraw/slidesStudio%20navigate%20slidesexcalidraw.png" alt="slidesStudio navigate slidesexcalidraw.png"><source media="(max-width:480px)" srcset="/img/optimized/Yn_j6AMVz6-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/Yn_j6AMVz6-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/Yn_j6AMVz6-665.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/Yn_j6AMVz6-665.jpeg"><img class="" src="/img/user/Excalidraw/slidesStudio%20navigate%20slidesexcalidraw.png" alt="slidesStudio navigate slidesexcalidraw.png" width=""></picture></p>
+<p>Drive OBS events with Open Sound Control (OSC) messages.</p>
+<ul>
+<li>Set the number of connected clients</li>
+<li>Send messages to Text sources.</li>
+<li>Return messages to clients.</li>
+</ul>
+<h2 id="setup" tabindex="-1">Setup</h2>
+<h3 id="install-python" tabindex="-1">Install Python</h3>
+<p>Python is a programming language that will need to be installed for the Keynote Controls to work.</p>
+<p>OBS supports python version 3.11 . It's important that Python 3.11 is installed. Newer versions are available, but these newer versions will not work.</p>
+<div class="callout" data-callout="note"><div class="callout-title"><div class="callout-title-inner">Note</div></div>
+<div class="callout-content">
+<p>
+<a href="https://www.python.org/downloads/release/python-3119/" target="_blank" class="external-link">Download and Install Python version 3.11</a></p>
+</div></div>
+<ol>
+<li>Download the MacOS installer</li>
+<li>Install Python 3.11 to the default location</li>
+</ol>
+<h2 id="install-python-dependencies" tabindex="-1">Install Python dependencies</h2>
+<p>This script use the <code>Python OSC</code> Library</p>
+<ol>
+<li>Open the Terminal app</li>
+<li>Enter the <code>pip</code> command</li>
+</ol>
+<pre><code>python3.11 -m pip install python-osc
+
+</code></pre>
+<h3 id="configure-obs-python-settings" tabindex="-1">Configure OBS Python Settings</h3>
+<p>OBS needs to know where Python is installed. Use the macOS Terminal app to find the Python install path. Then enter the Python install path in OBS</p>
+<ol>
+<li>Open the Terminal app</li>
+<li>Enter the 'which' command</li>
+</ol>
+<pre><code class="language-shell">which python3.11
+</code></pre>
+<p>The default install path will be returned</p>
+<pre><code>/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11
+</code></pre>
+<ol start="3">
+<li>
+<p>Use the mouse to highlight the path</p>
+</li>
+<li>
+<p>Right click and select &quot;Copy&quot;</p>
+</li>
+<li>
+<p>Open OBS</p>
+</li>
+<li>
+<p>From the menu bar select <code>Tools &gt; Scripts</code></p>
+</li>
+<li>
+<p>In the Scripts window switch to the <code>Python Settings</code> tab</p>
+</li>
+<li>
+<p>Click the &quot;Browse&quot; button</p>
+</li>
+<li>
+<p>Use the keyboard shortcut <code>cmd + shift + G</code></p>
+</li>
+<li>
+<p>In the pop-up, right click in the &quot;Go To Folder&quot; input field</p>
+</li>
+<li>
+<p>select paste<br>
+<picture src="/img/user/Pasted%20image%2020251106140904.png" alt="Pasted image 20251106140904.png"><source media="(max-width:480px)" srcset="/img/optimized/22VDcrFB0f-439.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/22VDcrFB0f-439.jpeg">
+<img class="" src="/img/user/Pasted%20image%2020251106140904.png" alt="Pasted image 20251106140904.png" width=""></picture></p>
+</li>
+<li>
+<p>Press &quot;Enter&quot;</p>
+</li>
+<li>
+<p>Click the &quot;Open&quot; button<br>
+The Pythons settings should now display &quot;Loaded Python Version: 3.11&quot;<br>
+<picture src="/img/user/Pasted%20image%2020251106141241.png" alt="Pasted image 20251106141241.png"><source media="(max-width:480px)" srcset="/img/optimized/nOUHlH7Ei3-500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/nOUHlH7Ei3-500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/nOUHlH7Ei3-520.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/nOUHlH7Ei3-520.jpeg"><img class="" src="/img/user/Pasted%20image%2020251106141241.png" alt="Pasted image 20251106141241.png" width=""></picture></p>
+</li>
+</ol>
+<h2 id="add-the-keynote-controls-script-to-obs" tabindex="-1">Add the Keynote Controls Script to OBS</h2>
+<p>The &quot;Keynote Controls&quot; script and accompanying OBS Collection can be found on Github.</p>
+<h3 id="import-the-keynote-controls-obs-collection" tabindex="-1">Import the Keynote Controls OBS Collection</h3>
+<ol>
+<li>Download the <a href="https://github.com/UUoocl/Keynote_Controls/blob/main/keynote_controls.json" target="_blank" class="external-link">Keynote Controls Collection</a></li>
+<li>In OBS, from the menu select <code>Scene Collection &gt; Import</code></li>
+<li>Import the collection</li>
+<li>Choose the collection <code>Scene Collection</code></li>
+</ol>
+<h3 id="add-the-keynote-controls-script" tabindex="-1">Add the Keynote Controls Script</h3>
+<ol>
+<li>Download the <a href="https://github.com/UUoocl/Keynote_Controls/blob/main/obs_python_keynote%20osascript.py" target="_blank" class="external-link">Keynote Controls Script</a></li>
+<li>In OBS, from the menu select <code>Tools &gt; Scripts</code></li>
+<li>Click the <code>+ Add script</code> button</li>
+</ol>
+<p>After installing the script, adjust the settings to the camera and slides scene.</p>
+<p>The &quot;Slides&quot; scene includes a &quot;macOS Screen Capture&quot; source to capture the Keynote slides. You can set the 'Display' as needed.</p>
+<p><picture src="/img/user/2025-11-06_14-46-18.png" alt="2025-11-06_14-46-18.png"><source media="(max-width:480px)" srcset="/img/optimized/yLe6zQL2bE-500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/yLe6zQL2bE-500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/yLe6zQL2bE-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/yLe6zQL2bE-700.jpeg"><img class="" src="/img/user/2025-11-06_14-46-18.png" alt="2025-11-06_14-46-18.png" width=""></picture></p>
+<h2 id="using-and-quot-keynote-controls-and-quot" tabindex="-1">Using &quot;Keynote Controls&quot;</h2>
+<h3 id="navigate-slides" tabindex="-1">Navigate Slides</h3>
+<h3 id="add-scene-tags-to-slides" tabindex="-1">Add Scene tags to slides</h3>
+<h3 id="adjust-teleprompter" tabindex="-1">Adjust teleprompter</h3>
+<p>[[<br>
+]]</p>
+<h2 id="configure-remote-controlller" tabindex="-1">Configure Remote Controlller</h2>
 </main>
 <aside>
 <div class="sidebar">
@@ -218,13 +316,37 @@ On this page
 <div class="toc-container">
 <nav class="toc">
 <ol>
-<li><a href="#navigating-slides">Navigating Slides</a>
+<li><a href="#setup">Setup</a>
 <ol>
-<li><a href="#1-current-slide-navigation">1. Current Slide navigation</a>
-</li>
-<li><a href="#2-slide-tags-navigation">2. Slide tags navigation</a>
+<li><a href="#install-python">Install Python</a>
 </li>
 </ol>
+</li>
+<li><a href="#install-python-dependencies">Install Python dependencies</a>
+<ol>
+<li><a href="#configure-obs-python-settings">Configure OBS Python Settings</a>
+</li>
+</ol>
+</li>
+<li><a href="#add-the-keynote-controls-script-to-obs">Add the Keynote Controls Script to OBS</a>
+<ol>
+<li><a href="#import-the-keynote-controls-obs-collection">Import the Keynote Controls OBS Collection</a>
+</li>
+<li><a href="#add-the-keynote-controls-script">Add the Keynote Controls Script</a>
+</li>
+</ol>
+</li>
+<li><a href="#using-and-quot-keynote-controls-and-quot">Using "Keynote Controls"</a>
+<ol>
+<li><a href="#navigate-slides">Navigate Slides</a>
+</li>
+<li><a href="#add-scene-tags-to-slides">Add Scene tags to slides</a>
+</li>
+<li><a href="#adjust-teleprompter">Adjust teleprompter</a>
+</li>
+</ol>
+</li>
+<li><a href="#configure-remote-controlller">Configure Remote Controlller</a>
 </li>
 </ol>
 </nav>
