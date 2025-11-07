@@ -11,9 +11,9 @@ Experiments in automating OBS
 
 [[Tutorials/Slides Studio Plugin/01. Slides Studio Plugin\|Slides Studio Plugin]] - An Obsidian plug in to manage OBS Scene changes with Slides Extended plugin presentations.
 
-[[OBS Scripts/Keynote Controls/Keynote Controls\|Keynote Controls]] - An OBS Python Script to Control Keynote, sync scene changes to slides, and notes teleprompter.
+[[OBS Scripts/Keynote Controls\|Keynote Controls]] - An OBS Python Script to Control Keynote, sync scene changes to slides, and notes teleprompter.
 
-[[OBS Scripts/OSC io/OSC io\|OSC io]] - An OBS Python script to manage messages between multiple OSC clients
+[[OBS Scripts/OSC io\|OSC io]] - An OBS Python script to manage messages between multiple OSC clients
 
 
 
