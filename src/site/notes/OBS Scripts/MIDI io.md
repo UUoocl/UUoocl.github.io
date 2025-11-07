@@ -6,4 +6,3 @@
 ```
  python3.11 -m pip install python-rtmidi
 ```
-
