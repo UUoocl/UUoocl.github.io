@@ -1,11 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-08T11:02:02.378-05:00"}
+{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-08T11:10:29.636-05:00"}
 ---
 
 # Projects
 
 Experiments in automating OBS
-![obs_IO.excalidraw.png](/img/user/Excalidraw/obs_io.excalidraw.png)
+![obs_io.excalidraw.png](/img/user/Excalidraw/obs_io.excalidraw.png)
 
 [[Tutorials/Slides Studio/01. Slides Studio\|Slides Studio]] - A tool to connect Slides.com  presentations to OBS. 
 
