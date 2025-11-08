@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-07T10:19:04.766-05:00"}
+{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-08T11:00:31.625-05:00"}
 ---
 
 # Projects
@@ -15,5 +15,5 @@ Experiments in automating OBS
 
 [[OBS Scripts/OSC io\|OSC io]] - An OBS Python script to manage messages between multiple OSC clients
 
-
-
+[[OBS Scripts/MIDI io\|MIDI io]] - An OBS Python script to manage messages between multiple MIDI devices
+[]
