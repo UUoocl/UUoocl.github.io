@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"noteIcon":"2","created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-08T11:14:34.334-05:00"}
+{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"noteIcon":"2","created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-08T11:25:06.183-05:00"}
 ---
 
-# Projects
+# Creative Thinking, Coding, Presenting
 
 Experiments in automating OBS
 ![obs_io.excalidraw.png](/img/user/Excalidraw/obs_io.excalidraw.png)
@@ -18,3 +18,5 @@ Experiments in automating OBS
 [[OBS Scripts/MIDI io\|MIDI io]] - An OBS Python script to manage messages between multiple MIDI devices
 
 [[OBS Scripts/Mouse input\|Mouse input]] - An OBS Python script to monitor mouse position, clicks and scroll
+
+[[OBS Scripts/Keyboard input\|Keyboard input]] - An OBS Lua script to monitor keyboard keys 
