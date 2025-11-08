@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/obs-scripts/osc-io/","created":"2025-11-06T20:51:37.367-05:00","updated":"2025-11-07T09:37:26.881-05:00"}
+{"dg-publish":true,"permalink":"/obs-scripts/osc-io/","noteIcon":"default","created":"2025-11-06T20:51:37.367-05:00","updated":"2025-11-07T09:37:26.881-05:00"}
 ---
 
 
