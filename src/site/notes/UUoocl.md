@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"created":"2025-06-22T20:19:21.869-04:00"}
+{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-07T10:19:04.766-05:00"}
 ---
 
 # Projects
