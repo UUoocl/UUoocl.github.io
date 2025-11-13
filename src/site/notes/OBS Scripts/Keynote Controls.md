@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/obs-scripts/keynote-controls/","noteIcon":"default","created":"2025-11-06T10:01:12.665-05:00","updated":"2025-11-07T08:43:09.056-05:00"}
+{"dg-publish":true,"permalink":"/obs-scripts/keynote-controls/","noteIcon":"default","created":"2025-11-06T11:01:12.665-04:00","updated":"2025-11-07T09:43:09.056-04:00"}
 ---
 
 Keynote Controls is an OBS Python script that enables...
