@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"noteIcon":"2","created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-12T09:11:35.947-04:00"}
+{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"noteIcon":"2","created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-14T16:10:13.400-04:00"}
 ---
 
 # Creative Thinking, Coding, Presenting
 
-## Experiments in automating OBS
+## Experiments in automating OBS 
 ![obs_io.excalidraw.png](/img/user/Excalidraw/obs_io.excalidraw.png)
 
 ### Get External Inputs
