@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"noteIcon":"2","created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-15T21:23:48.258-05:00"}
+{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"noteIcon":"2","created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-15T21:32:48.027-05:00"}
 ---
 
 Welcome to my digital garden of growing projects.  Projects here are at various stages of growth.  No guarantee of usability is offered.  These projects are shared unlicensed.
@@ -9,17 +9,15 @@ Welcome to my digital garden of growing projects.  Projects here are at various 
 >🪴 - growing - some functionality
 >🌺 - bloom - getting there
 
-# UUinsome: Creative Thinking, Coding, Presenting
+# 🪴UUinsome: Creative Thinking, Coding, Presenting
 
-You should be [[winsome\|winsome]], whether your presenting in-person, live online or recording a video. The UUinsome project has tools to bring your presentations to life.  
+Presentations should be [[winsome\|winsome]], whether your presenting in-person, live online or recording a video. The UUinsome project has tools to make presentations more ... winsome.  
 
-Make presentation slides in Obsidian, Keynote or PowerPoint.  Then use the slides to automate OBS.  Program where slides appear on the screen, change slides with a hand gesture, use your imagination to make creative expressions.    
+Make presentation slides in Obsidian, Keynote or PowerPoint that automate OBS.  Program where slides appear on the screen, change slides with a hand gesture, use your imagination to make creative expressions.    
 
-Use the UUinsome scripts to get started, then make your own.  This is a project where you can learn the basics of web development.  
+Use the UUinsome scripts to get started, then make your own.  This is a project where you can use creative coding Javascript libraries, like P5.js or Cables.gl.  
 
 UUinsome scripts use python, javascript and node.  
-Obsidian ♥️ OBS
-VSCode
 ![obs_io.excalidraw.png](/img/user/Excalidraw/obs_io.excalidraw.png)
 
 ## System Setup

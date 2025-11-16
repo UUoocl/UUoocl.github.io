@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/system-setup/install-python/","noteIcon":"3","created":"2025-11-15T14:15:03.278-05:00","updated":"2025-11-15T21:09:39.711-05:00"}
+{"dg-publish":true,"permalink":"/system-setup/install-python/","noteIcon":"3","created":"2025-11-15T14:15:03.278-05:00","updated":"2025-11-15T21:38:04.468-05:00"}
 ---
 
 
@@ -47,4 +47,4 @@ which python3.11
 12. Press "Enter"
 13. Click the "Open" button
 The Pythons settings should now display "Loaded Python Version: 3.11"
-![Pasted image 20251106141241.png](/img/user/Pasted%20image%2020251106141241.png)
+![Pasted image 20251106141241.png|300](/img/user/Pasted%20image%2020251106141241.png)
