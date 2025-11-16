@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":" /Install Python.md","permalink":"//install-python/","title":"System Setup","noteIcon":"2","created":"2025-11-15T14:15:03.278-05:00","updated":"2025-11-16T14:38:09.113-05:00"}
+{"dg-publish":true,"dg-path":" System Setup1/Install Python.md","permalink":"/system-setup1/install-python/","title":"System Setup","noteIcon":"2","created":"2025-11-15T14:15:03.278-05:00","updated":"2025-11-16T14:41:49.737-05:00"}
 ---
 
 
