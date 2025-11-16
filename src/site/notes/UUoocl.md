@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"noteIcon":"2","created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-15T16:13:10.878-05:00"}
+{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"noteIcon":"2","created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-15T21:23:48.258-05:00"}
 ---
 
 Welcome to my digital garden of growing projects.  Projects here are at various stages of growth.  No guarantee of usability is offered.  These projects are shared unlicensed.
@@ -52,7 +52,7 @@ Install some or all of the interfaces developed so far.
 ### Tutorials
 Do interesting things with the interfaces. 
 
-[[Tutorials/Keynote Controls\|Keynote Controls]] - An OBS Python Script to Control Keynote, sync scene changes to slides, and notes teleprompter.
+[[Tutorials/01.01 Keynote Controls\|01.01 Keynote Controls]] - An OBS Python Script to Control Keynote, sync scene changes to slides, and notes teleprompter.
 
 [[Tutorials/Slides Studio/01. Slides Studio\|Slides Studio]] - A tool to connect Slides.com  presentations to OBS. 
 
