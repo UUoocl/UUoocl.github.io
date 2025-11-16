@@ -1,0 +1,66 @@
+---
+{"dg-publish":true,"permalink":"/02-interfaces/osc-io/","noteIcon":"2","created":"2025-11-06T20:51:37.367-05:00","updated":"2025-11-16T14:24:04.032-05:00"}
+---
+
+Drive OBS events with Open Sound Control (OSC) messages. 
+- Set the number of connected clients
+- Send messages to Text sources. 
+- Return messages to clients.
+
+## Script Process
+
+OSC messages are received from a client.  A client could be an app, like ZoomOSC, or hardware, like an OBSBOT PTZ camera.  
+
+The User configures the OSC server and creates a text sources to store and display incoming and outgoing messages.  
+
+A text source is used because changes to a text source are easily observed by WebSocket clients.  When a text source is updated an "InputSettingsChanged" event is sent to webSocket clients.  See the [[Processing ZoomOSC Messages\|Processing ZoomOSC Messages]] tutorial for a complete example. 
+
+![obs_osc_io.excalidraw.png](/img/user/Excalidraw/obs_osc_io.excalidraw.png)
+## Setup
+
+### Install Python dependencies
+This script uses the [`Python OSC`](pypi.org) Library.   
+ 1. Open the Terminal app
+ 2. Enter the `pip` command
+ ```
+ python3.11 -m pip install python-osc 
+ ```
+
+## Add the OSC io Script to OBS
+The "OSC io" script and accompanying OBS Collection can be found on Github.
+[python osc io repo](https://github.com/UUoocl/python_osc_io)
+
+### Import the OSC io OBS Collection
+1. Download the [OSC io Collection](https://github.com/UUoocl/Keynote_Controls/blob/main/keynote_controls.json)
+2. In OBS, from the menu select `Scene Collection > Import`
+3. Import the collection
+4. Choose the collection `Scene Collection`
+
+### Add the OSC io Script
+1. Download the [OSC io Script](https://github.com/UUoocl/Keynote_Controls/blob/main/obs_python_keynote%20osascript.py)
+2. In OBS, from the menu select `Tools > Scripts`
+3. Click the `+ Add script` button
+
+## Configure OSC Server and Clients
+
+### Configure OSC Server
+The OSC Server receives and sends messages from the OSC clients.
+The OSC Server default is configured to only run on the local machine.  
+
+>[!note] Server Settings
+> Server IP Address: 127.0.0.1
+> Server Port: 12345
+
+
+![2025-11-15_17-28-04.png](/img/user/2025-11-15_17-28-04.png)
+### Add OSC Clients
+Set the number of clients 1 to 10, then configure each client. 
+
+>[!note] OSC Client Settings
+> Client IP Address: 127.0.0.1
+> Client Port: 12345
+> Client Text Source Receive Name: Create a text source for incoming messages
+> Client Text Source Send Name: Create a text source for outgoing messages
+> Client OSC Address: enter an OSC address if necessary
+
+![Pasted image 20251115210234.png](/img/user/Pasted%20image%2020251115210234.png)
