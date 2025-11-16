@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/interfaces/osc-io/","noteIcon":"3","created":"2025-11-06T20:51:37.367-05:00","updated":"2025-11-16T12:41:41.500-05:00"}
+{"dg-publish":true,"permalink":"/interfaces/osc-io/","noteIcon":"2","created":"2025-11-06T20:51:37.367-05:00","updated":"2025-11-16T14:24:04.032-05:00"}
 ---
 
 Drive OBS events with Open Sound Control (OSC) messages. 
