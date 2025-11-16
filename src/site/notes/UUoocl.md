@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"noteIcon":"2","created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-15T22:33:48.308-05:00"}
+{"dg-publish":true,"permalink":"/u-uoocl/","pinned":true,"tags":["gardenEntry"],"noteIcon":"2","created":"2025-06-22T20:19:21.869-04:00","updated":"2025-11-16T14:47:54.236-05:00"}
 ---
 
 Welcome to my digital garden of growing projects.  Projects here are at various stages of growth.  No guarantee of usability is offered.  These projects are shared unlicensed.
@@ -9,9 +9,9 @@ Welcome to my digital garden of growing projects.  Projects here are at various 
 >🪴 - growing - some functionality
 >🌺 - bloom - getting there
 
-# 🪴UUinsome: Creative Thinking, Coding, Presenting
+# 🪴[UUinsome](https://github.com/users/UUoocl/projects/2/views/7): Creative Thinking, Coding, Presenting
 
-Presentations should be [[winsome\|winsome]], whether your presenting in-person, live online or recording a video. The UUinsome project has tools to make presentations more ... winsome.  
+Presentations should be [[winsome\|winsome]], whether you are presenting in-person, live online or recording a video. The UUinsome project has tools to make presentations more ... winsome.  
 
 Make presentation slides in Obsidian, Keynote or PowerPoint that automate OBS.  Program where slides appear on the screen, change slides with a hand gesture, use your imagination to make creative expressions.    
 
