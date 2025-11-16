@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Mouse input</title>
+<title>OSC io</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -65,7 +65,7 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="3" style="text-decoration:none" class="filename" href="/interfaces/osc-io/">OSC io </a>
+<div @click.stop class="notelink active-note"><a data-note-icon="3" style="text-decoration:none" class="filename" href="/interfaces/osc-io/">OSC io </a>
 </div>
 </div>
 </div>
@@ -90,7 +90,7 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink active-note"><a data-note-icon="default" style="text-decoration:none" class="filename" href="/obs-scripts/mouse-input/">Mouse input </a>
+<div @click.stop class="notelink"><a data-note-icon="default" style="text-decoration:none" class="filename" href="/obs-scripts/mouse-input/">Mouse input </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -192,16 +192,117 @@
 </div>
 <main class="content cm-s-obsidian">
 <header>
-<h1 data-note-icon="default">Mouse input</h1>
+<h1 data-note-icon="3">OSC io</h1>
 <div class="header-meta">
 <div class="header-tags">
 </div>
-<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-11-07T10:37:46.179-04:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2025-11-07T10:39:02.321-04:00"></span></div></div></div>
+<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-11-06T20:51:37.367-05:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2025-11-15T21:05:37.583-05:00"></span></div></div></div>
 </header>
+<p>Drive OBS events with Open Sound Control (OSC) messages.</p>
+<ul>
+<li>Set the number of connected clients</li>
+<li>Send messages to Text sources.</li>
+<li>Return messages to clients.</li>
+</ul>
+<h2 id="script-process" tabindex="-1">Script Process</h2>
+<p>OSC messages are received from a client. A client could be an app, like ZoomOSC, or hardware, like an OBSBOT PTZ camera.</p>
+<p>The User configures the OSC server and creates a text sources to store and display incoming and outgoing messages.</p>
+<p>A text source is used because changes to a text source are easily observed by WebSocket clients. When a text source is updated an &quot;InputSettingsChanged&quot; event is sent to webSocket clients. See the <a class="internal-link is-unresolved" href="/404" target="">Processing ZoomOSC Messages</a> tutorial for a complete example.</p>
+<p><picture src="/img/user/Excalidraw/obs_osc_io.excalidraw.png" alt="obs_osc_io.excalidraw.png"><source media="(max-width:480px)" srcset="/img/optimized/DFVvdGxcH4-461.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/DFVvdGxcH4-461.jpeg">
+<img class="" src="/img/user/Excalidraw/obs_osc_io.excalidraw.png" alt="obs_osc_io.excalidraw.png" width=""></picture></p>
+<h2 id="setup" tabindex="-1">Setup</h2>
+<h3 id="install-python-dependencies" tabindex="-1">Install Python dependencies</h3>
+<p>This script uses the <a href="pypi.org" target="_blank" class="external-link"><code>Python OSC</code></a> Library.</p>
+<ol>
+<li>Open the Terminal app</li>
+<li>Enter the <code>pip</code> command</li>
+</ol>
+<pre><code>python3.11 -m pip install python-osc 
+</code></pre>
+<h2 id="add-the-osc-io-script-to-obs" tabindex="-1">Add the OSC io Script to OBS</h2>
+<p>The &quot;OSC io&quot; script and accompanying OBS Collection can be found on Github.</p>
+<h3 id="import-the-osc-io-obs-collection" tabindex="-1">Import the OSC io OBS Collection</h3>
+<ol>
+<li>Download the <a href="https://github.com/UUoocl/Keynote_Controls/blob/main/keynote_controls.json" target="_blank" class="external-link">OSC io Collection</a></li>
+<li>In OBS, from the menu select <code>Scene Collection &gt; Import</code></li>
+<li>Import the collection</li>
+<li>Choose the collection <code>Scene Collection</code></li>
+</ol>
+<h3 id="add-the-osc-io-script" tabindex="-1">Add the OSC io Script</h3>
+<ol>
+<li>Download the <a href="https://github.com/UUoocl/Keynote_Controls/blob/main/obs_python_keynote%20osascript.py" target="_blank" class="external-link">OSC io Script</a></li>
+<li>In OBS, from the menu select <code>Tools &gt; Scripts</code></li>
+<li>Click the <code>+ Add script</code> button</li>
+</ol>
+<h2 id="configure-osc-server-and-clients" tabindex="-1">Configure OSC Server and Clients</h2>
+<h3 id="configure-osc-server" tabindex="-1">Configure OSC Server</h3>
+<p>The OSC Server receives and sends messages from the OSC clients.<br>
+The OSC Server default is configured to only run on the local machine.</p>
+<div class="callout" data-callout="note"><div class="callout-title"><div class="callout-title-inner"> Server Settings<br></div></div>
+<div class="callout-content">
+<p>
+Server IP Address: 127.0.0.1<br>
+Server Port: 12345</p>
+</div></div>
+<p><picture src="/img/user/2025-11-15_17-28-04.png" alt="2025-11-15_17-28-04.png"><source media="(max-width:480px)" srcset="/img/optimized/O8-GVnoFb0-486.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/O8-GVnoFb0-486.jpeg">
+<img class="" src="/img/user/2025-11-15_17-28-04.png" alt="2025-11-15_17-28-04.png" width=""></picture></p>
+<h3 id="add-osc-clients" tabindex="-1">Add OSC Clients</h3>
+<p>Set the number of clients 1 to 10, then configure each client.</p>
+<div class="callout" data-callout="note"><div class="callout-title"><div class="callout-title-inner"> OSC Client Settings<br></div></div>
+<div class="callout-content">
+<p>
+Client IP Address: 127.0.0.1<br>
+Client Port: 12345<br>
+Client Text Source Receive Name: Create a text source for incoming messages<br>
+Client Text Source Send Name: Create a text source for outgoing messages<br>
+Client OSC Address: enter an OSC address if necessary</p>
+</div></div>
+<p><picture src="/img/user/Pasted%20image%2020251115210234.png" alt="Pasted image 20251115210234.png"><source media="(max-width:480px)" srcset="/img/optimized/avFKE4TYmB-375.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/avFKE4TYmB-375.jpeg">
+<img class="" src="/img/user/Pasted%20image%2020251115210234.png" alt="Pasted image 20251115210234.png" width=""></picture></p>
 </main>
 <aside>
 <div class="sidebar">
 <div class="sidebar-container">
+<div class="toc">
+<div class="toc-title-container">
+<div class="toc-title">
+On this page
+</div>
+</div>
+<div class="toc-container">
+<nav class="toc">
+<ol>
+<li><a href="#script-process">Script Process</a>
+</li>
+<li><a href="#setup">Setup</a>
+<ol>
+<li><a href="#install-python-dependencies">Install Python dependencies</a>
+</li>
+</ol>
+</li>
+<li><a href="#add-the-osc-io-script-to-obs">Add the OSC io Script to OBS</a>
+<ol>
+<li><a href="#import-the-osc-io-obs-collection">Import the OSC io OBS Collection</a>
+</li>
+<li><a href="#add-the-osc-io-script">Add the OSC io Script</a>
+</li>
+</ol>
+</li>
+<li><a href="#configure-osc-server-and-clients">Configure OSC Server and Clients</a>
+<ol>
+<li><a href="#configure-osc-server">Configure OSC Server</a>
+</li>
+<li><a href="#add-osc-clients">Add OSC Clients</a>
+</li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+</div>
 </div>
 </div>
 </aside>
