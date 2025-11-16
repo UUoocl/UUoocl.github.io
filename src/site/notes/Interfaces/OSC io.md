@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/interfaces/osc-io/","noteIcon":"3","created":"2025-11-06T20:51:37.367-05:00","updated":"2025-11-15T21:05:37.583-05:00"}
+{"dg-publish":true,"permalink":"/interfaces/osc-io/","noteIcon":"3","created":"2025-11-06T20:51:37.367-05:00","updated":"2025-11-16T12:41:41.500-05:00"}
 ---
 
 Drive OBS events with Open Sound Control (OSC) messages. 
@@ -28,6 +28,7 @@ This script uses the [`Python OSC`](pypi.org) Library.
 
 ## Add the OSC io Script to OBS
 The "OSC io" script and accompanying OBS Collection can be found on Github.
+[python osc io repo](https://github.com/UUoocl/python_osc_io)
 
 ### Import the OSC io OBS Collection
 1. Download the [OSC io Collection](https://github.com/UUoocl/Keynote_Controls/blob/main/keynote_controls.json)
