@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Getting Started</title>
+<title>Slides Studio</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -119,7 +119,7 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink active-note"><a data-note-icon="default" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-01-getting-started/">Getting Started </a>
+<div @click.stop class="notelink"><a data-note-icon="default" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-01-getting-started/">Getting Started </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -174,7 +174,7 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="default" style="text-decoration:none" class="filename" href="/tutorials/01-02-slides-studio/">Slides Studio </a>
+<div @click.stop class="notelink active-note"><a data-note-icon="default" style="text-decoration:none" class="filename" href="/tutorials/01-02-slides-studio/">Slides Studio </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -188,12 +188,16 @@
 </div>
 <main class="content cm-s-obsidian">
 <header>
-<h1 data-note-icon="default">Getting Started</h1>
+<h1 data-note-icon="default">Slides Studio</h1>
 <div class="header-meta">
 <div class="header-tags">
 </div>
-<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-07-21T21:42:28.608-04:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2025-11-09T12:04:17.926-05:00"></span></div></div></div>
+<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-11-09T11:51:10.431-05:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2025-11-15T21:24:00.138-05:00"></span></div></div></div>
 </header>
+<p><a href="https://uuoocl.github.io/slides-studio/" target="_blank" class="external-link">Slides Studio</a> is a github page that enables <a href="http://slides.com" target="_blank" class="external-link">slides.com</a> presentations to control Open Broadcast Studio (OBS).</p>
+<p><picture src="/img/user/Excalidraw/Drawing%20slides%20studio%20diagram.excalidraw.png" alt="Drawing slides studio diagram.excalidraw.png"><source media="(max-width:480px)" srcset="/img/optimized/pESz9Uy_fu-500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/pESz9Uy_fu-500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/pESz9Uy_fu-517.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/pESz9Uy_fu-517.jpeg"><img class="" src="/img/user/Excalidraw/Drawing%20slides%20studio%20diagram.excalidraw.png" alt="Drawing slides studio diagram.excalidraw.png" width=""></picture></p>
 <h1 id="requirements" tabindex="-1">Requirements</h1>
 <ol>
 <li>A <a href="http://Slides.com" target="_blank" class="external-link">Slides.com</a> presentation link.</li>
@@ -238,8 +242,62 @@ a. &quot;Scene Collection&quot; -&gt; &quot;Slides.com_Collection&quot;</li>
 <source media="(max-width:480px)" srcset="/img/optimized/cdxS-06Kdy-500.jpeg">
 <source media="(max-width:1920px)" srcset="/img/optimized/cdxS-06Kdy-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/cdxS-06Kdy-700.jpeg"><img class="" src="/img/user/Excalidraw/Drawing%20Set%20Camera.excalidraw.png" alt="Drawing Set Camera.excalidraw.png" width=""></picture></li>
 </ol>
-<h3 id="select" tabindex="-1">Select</h3>
-<p>next: <a class="internal-link" target="" data-note-icon="default" href="/tutorials/slides-studio/01-02-slide-studio-settings/">01.02 Slide Studio Settings</a></p>
+<h2 id="connecting-obsidian-and-obs" tabindex="-1">Connecting Obsidian and OBS</h2>
+<p>Complete the <a href="https://uuoocl.github.io/slides-studio/" target="_blank" class="external-link">Slides Studio </a> connection form.</p>
+<h3 id="slides-deck" tabindex="-1">Slides Deck</h3>
+<ol>
+<li>Enter a <a href="http://Slides.com" target="_blank" class="external-link">Slides.com</a> presentation link<br>
+example, <a href="https://slides.com/uuoocl/deck-48ea10" target="_blank" class="external-link">https://slides.com/uuoocl/deck-48ea10</a></li>
+</ol>
+<h3 id="open-obs" tabindex="-1">Open OBS</h3>
+<p>If OBS is already open, then</p>
+<ol>
+<li>enter the port number and password.</li>
+<li>click the &quot;connect&quot; button</li>
+</ol>
+<h2 id="choose-the-and-quot-studio-and-quot-layout" tabindex="-1">Choose the &quot;Studio&quot; layout</h2>
+<p>After connecting to the OBS WebSocket server, the Slide Studio view will appear.</p>
+<ol>
+<li>Use the &quot;Layout&quot; button and select the &quot;Studio&quot; option.</li>
+</ol>
+<h2 id="add-slide-tags" tabindex="-1">Add Slide Tags</h2>
+<ol start="2">
+<li>For each slide, click the cell to choose an available option.
+<ul>
+<li>Slide Position: where the slides appears on the scene</li>
+<li>camera Position: where the Camera appears on the scene</li>
+<li>Camera Shape: change the camera from a rectangle to a different shape</li>
+<li>Scene: OBS scenes that beging with &quot;Scene&quot;<br>
+<picture src="/img/user/Excalidraw/Drawing%20add%20control%20tags.excalidraw.png" alt="Drawing add control tags.excalidraw.png"><source media="(max-width:480px)" srcset="/img/optimized/lRxiqXucB--500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/lRxiqXucB--500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/lRxiqXucB--585.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/lRxiqXucB--585.jpeg"><img class="" src="/img/user/Excalidraw/Drawing%20add%20control%20tags.excalidraw.png" alt="Drawing add control tags.excalidraw.png" width=""></picture></li>
+</ul>
+</li>
+</ol>
+<h2 id="navigating-slides" tabindex="-1">Navigating Slides</h2>
+<h3 id="1-current-slide-navigation" tabindex="-1">1. Current Slide navigation</h3>
+<p>Click the &quot;&gt;&quot; button to advance to the next slide, or the &quot;&lt;&quot; button to return to the previous slide.</p>
+<p>The keyboard keys left and right arrow keys can navigate the slides forward and back.</p>
+<h3 id="2-slide-tags-navigation" tabindex="-1">2. Slide tags navigation</h3>
+<p>Click on the slide number in the &quot;Index&quot; column to jump to a specific slide.</p>
+<p>Press the keyboard &quot;spacebar&quot; key to advance to the next slide.</p>
+<p><picture src="/img/user/Excalidraw/slidesStudio%20navigate%20slidesexcalidraw.png" alt="slidesStudio navigate slidesexcalidraw.png"><source media="(max-width:480px)" srcset="/img/optimized/Yn_j6AMVz6-500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/Yn_j6AMVz6-500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/Yn_j6AMVz6-665.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/Yn_j6AMVz6-665.jpeg"><img class="" src="/img/user/Excalidraw/slidesStudio%20navigate%20slidesexcalidraw.png" alt="slidesStudio navigate slidesexcalidraw.png" width=""></picture></p>
+<h2 id="add-notes-to-slide" tabindex="-1">Add notes to slide</h2>
+<p>Slides Studio uses the Reveal.js notes format. Notes are defined by appending an <code>&lt;aside&gt;</code> element to a slide as seen below .</p>
+<p><picture src="/img/user/Pasted%20image%2020250805060851.png" alt="Pasted image 20250805060851.png"><source media="(max-width:480px)" srcset="/img/optimized/o6EWFUYyvX-500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/o6EWFUYyvX-500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/o6EWFUYyvX-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/o6EWFUYyvX-700.jpeg"><img class="" src="/img/user/Pasted%20image%2020250805060851.png" alt="Pasted image 20250805060851.png" width=""></picture></p>
+<h2 id="adjust-teleprompter-settings" tabindex="-1">Adjust teleprompter settings</h2>
+<p>Click the &quot;Layout&quot; button, then select &quot;Teleprompter&quot;.</p>
+<p>The teleprompter view can set the font size, scroll speed, flip text and play/pause</p>
+<p><picture src="/img/user/Pasted%20image%2020250805055539.png" alt="Pasted image 20250805055539.png"><source media="(max-width:480px)" srcset="/img/optimized/1yoXqC-fJ5-500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/1yoXqC-fJ5-500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/1yoXqC-fJ5-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/1yoXqC-fJ5-700.jpeg"><img class="" src="/img/user/Pasted%20image%2020250805055539.png" alt="Pasted image 20250805055539.png" width=""></picture></p>
+<h1 id="create-camera-position" tabindex="-1">Create Camera Position</h1>
+<h1 id="create-slide-position" tabindex="-1">Create Slide Position</h1>
+<h1 id="create-camera-shape" tabindex="-1">Create Camera Shape</h1>
 </main>
 <aside>
 <div class="sidebar">
@@ -263,11 +321,39 @@ On this page
 </li>
 <li><a href="#select-a-camera">Select a Camera</a>
 </li>
-<li><a href="#select">Select</a>
+</ol>
+</li>
+<li><a href="#connecting-obsidian-and-obs">Connecting Obsidian and OBS</a>
+<ol>
+<li><a href="#slides-deck">Slides Deck</a>
+</li>
+<li><a href="#open-obs">Open OBS</a>
 </li>
 </ol>
 </li>
+<li><a href="#choose-the-and-quot-studio-and-quot-layout">Choose the "Studio" layout</a>
+</li>
+<li><a href="#add-slide-tags">Add Slide Tags</a>
+</li>
+<li><a href="#navigating-slides">Navigating Slides</a>
+<ol>
+<li><a href="#1-current-slide-navigation">1. Current Slide navigation</a>
+</li>
+<li><a href="#2-slide-tags-navigation">2. Slide tags navigation</a>
+</li>
 </ol>
+</li>
+<li><a href="#add-notes-to-slide">Add notes to slide</a>
+</li>
+<li><a href="#adjust-teleprompter-settings">Adjust teleprompter settings</a>
+</li>
+</ol>
+</li>
+<li><a href="#create-camera-position">Create Camera Position</a>
+</li>
+<li><a href="#create-slide-position">Create Slide Position</a>
+</li>
+<li><a href="#create-camera-shape">Create Camera Shape</a>
 </li>
 </ol>
 </nav>

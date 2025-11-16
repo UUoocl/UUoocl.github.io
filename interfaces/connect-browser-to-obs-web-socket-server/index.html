@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Getting Started</title>
+<title>Connect Browser to OBS WebSocket Server</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -53,7 +53,7 @@
 <span class="foldername">Interfaces</span>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="3" style="text-decoration:none" class="filename" href="/interfaces/connect-browser-to-obs-web-socket-server/">Connect Browser to OBS WebSocket Server </a>
+<div @click.stop class="notelink active-note"><a data-note-icon="3" style="text-decoration:none" class="filename" href="/interfaces/connect-browser-to-obs-web-socket-server/">Connect Browser to OBS WebSocket Server </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -119,7 +119,7 @@
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink active-note"><a data-note-icon="default" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-01-getting-started/">Getting Started </a>
+<div @click.stop class="notelink"><a data-note-icon="default" style="text-decoration:none" class="filename" href="/tutorials/slides-studio/01-01-getting-started/">Getting Started </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -188,91 +188,16 @@
 </div>
 <main class="content cm-s-obsidian">
 <header>
-<h1 data-note-icon="default">Getting Started</h1>
+<h1 data-note-icon="3">Connect Browser to OBS WebSocket Server</h1>
 <div class="header-meta">
 <div class="header-tags">
 </div>
-<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-07-21T21:42:28.608-04:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2025-11-09T12:04:17.926-05:00"></span></div></div></div>
+<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-11-07T09:39:26.287-05:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2025-11-15T21:12:10.292-05:00"></span></div></div></div>
 </header>
-<h1 id="requirements" tabindex="-1">Requirements</h1>
-<ol>
-<li>A <a href="http://Slides.com" target="_blank" class="external-link">Slides.com</a> presentation link.</li>
-</ol>
-<ul>
-<li>example, <a href="https://slides.com/uuoocl/deck-48ea10" target="_blank" class="external-link">https://slides.com/uuoocl/deck-48ea10</a></li>
-</ul>
-<p>Optionally, create a <a href="http://Slides.com" target="_blank" class="external-link">Slides.com</a> account (starting at $5 usd per month) to create your own presentations.</p>
-<ol start="2">
-<li>Download OBS</li>
-</ol>
-<ul>
-<li><a href="https://obsproject.com/" target="_blank" class="external-link">Open Broadcast Studio</a> Free and Open Source software for video recording and live streaming.</li>
-</ul>
-<h2 id="obs-configuration" tabindex="-1">OBS Configuration:</h2>
-<h3 id="import-the-slide-studio-scene-collection" tabindex="-1">Import the Slide Studio Scene Collection</h3>
-<ol>
-<li>Download the Slides Studio OBS Scene Collection <a href="https://github.com/UUoocl/slides-studio/blob/main/obs_Collections/Slidescom_Collection.json" target="_blank" class="external-link">download link.</a></li>
-<li>In OBS Import the Slides Studio OBS collection<br>
-a. On the file menu click, &quot;Scene Collection&quot; -&gt; &quot;Import&quot;<br>
-<picture src="/img/user/media/Pasted%20image%2020250802193752.png" alt="Pasted image 20250802193752.png"><source media="(max-width:480px)" srcset="/img/optimized/aY4RwUDXlX-141.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/aY4RwUDXlX-141.jpeg">
-<img class="" src="/img/user/media/Pasted%20image%2020250802193752.png" alt="Pasted image 20250802193752.png" width=""></picture></li>
-<li>Select the Scene Collection.<br>
-a. &quot;Scene Collection&quot; -&gt; &quot;Slides.com_Collection&quot;</li>
-</ol>
-<h3 id="enable-the-obs-web-socket-server" tabindex="-1">Enable the OBS WebSocket Server</h3>
-<ol>
-<li>On the file menu click, &quot;Tools&quot; -&gt; &quot;WebSocket Server Settings&quot;</li>
-<li>Check the &quot;Enable WebSocket server&quot; option<br>
-<picture src="/img/user/media/Pasted%20image%2020250802195254.png" alt="Pasted image 20250802195254.png"><source media="(max-width:480px)" srcset="/img/optimized/6mrLNcmjNR-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/6mrLNcmjNR-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/6mrLNcmjNR-584.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/6mrLNcmjNR-584.jpeg"><img class="" src="/img/user/media/Pasted%20image%2020250802195254.png" alt="Pasted image 20250802195254.png" width=""></picture></li>
-<li>Click the &quot;Show Connect Info&quot; button to view the Server Password.</li>
-</ol>
-<h3 id="select-a-camera" tabindex="-1">Select a Camera</h3>
-<ol>
-<li>Select the Scene named &quot;Set Camera&quot;</li>
-<li>Double click the Source named &quot;Camera 1&quot; to open the source properties window</li>
-<li>Use the &quot;Device&quot; drop down to select a camera.<br>
-<picture src="/img/user/Excalidraw/Drawing%20Set%20Camera.excalidraw.png" alt="Drawing Set Camera.excalidraw.png"><source media="(max-width:480px)" srcset="/img/optimized/cdxS-06Kdy-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/cdxS-06Kdy-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/cdxS-06Kdy-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/cdxS-06Kdy-700.jpeg"><img class="" src="/img/user/Excalidraw/Drawing%20Set%20Camera.excalidraw.png" alt="Drawing Set Camera.excalidraw.png" width=""></picture></li>
-</ol>
-<h3 id="select" tabindex="-1">Select</h3>
-<p>next: <a class="internal-link" target="" data-note-icon="default" href="/tutorials/slides-studio/01-02-slide-studio-settings/">01.02 Slide Studio Settings</a></p>
 </main>
 <aside>
 <div class="sidebar">
 <div class="sidebar-container">
-<div class="toc">
-<div class="toc-title-container">
-<div class="toc-title">
-On this page
-</div>
-</div>
-<div class="toc-container">
-<nav class="toc">
-<ol>
-<li><a href="#requirements">Requirements</a>
-<ol>
-<li><a href="#obs-configuration">OBS Configuration:</a>
-<ol>
-<li><a href="#import-the-slide-studio-scene-collection">Import the Slide Studio Scene Collection</a>
-</li>
-<li><a href="#enable-the-obs-web-socket-server">Enable the OBS WebSocket Server</a>
-</li>
-<li><a href="#select-a-camera">Select a Camera</a>
-</li>
-<li><a href="#select">Select</a>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</nav>
-</div>
-</div>
 </div>
 </div>
 </aside>
