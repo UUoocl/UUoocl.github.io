@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Keynote Controls</title>
+<title>Open Broadcast Studio</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -77,7 +77,7 @@ CTRL + K
 <span class="foldername">01 System Setup</span>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/01-system-setup/01-01-open-broadcast-studio/">Open Broadcast Studio </a>
+<div @click.stop class="notelink active-note"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/01-system-setup/01-01-open-broadcast-studio/">Open Broadcast Studio </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -231,7 +231,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink active-note"><a data-note-icon="3" style="text-decoration:none" class="filename" href="/03-tutorials/01-01-keynote-controls/">Keynote Controls </a>
+<div @click.stop class="notelink"><a data-note-icon="3" style="text-decoration:none" class="filename" href="/03-tutorials/01-01-keynote-controls/">Keynote Controls </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -268,71 +268,52 @@ CTRL + K
 <script>document.addEventListener("DOMContentLoaded",init,!1),document.addEventListener("DOMContentLoaded",setCorrectShortcut,!1),window.toggleSearch=function(){document.getElementById("globalsearch").classList.contains("active")?document.getElementById("globalsearch").classList.remove("active"):(document.getElementById("globalsearch").classList.add("active"),document.getElementById("term").focus())},window.toggleTagSearch=function(e){console.log(e.textContent);const t=e.textContent;t&&(window.document.getElementById("term").value=t.trim(),window.toggleSearch(),window.search())};const loadingSvg='\n    <svg width="100" height="100" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" stroke="#fff">\n      <g fill="none" fill-rule="evenodd" transform="translate(1 1)" stroke-width="2">\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="1.5s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="1.5s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="1.5s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="3s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="3s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="3s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="8">\n              <animate attributeName="r"\n                   begin="0s" dur="1.5s"\n                   values="6;1;2;3;4;5;6"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n      </g>\n  </svg>';function debounce(e,t,n){var a;return function(){var r=this,i=arguments,c=n&&!a;clearTimeout(a),a=setTimeout((function(){a=null,n||e.apply(r,i)}),t),c&&e.apply(r,i)}}function setCorrectShortcut(){navigator.platform.toUpperCase().indexOf("MAC")>=0&&document.querySelectorAll(".search-keys").forEach((e=>e.innerHTML="⌘ + K"))}function createIndex(e){const t=e=>e.toLowerCase().split(/([^a-z]|[^\x00-\x7F])/),n=new FlexSearch.Document({cache:!0,charset:"latin:extra",optimize:!0,index:[{field:"content",tokenize:"reverse",encode:t},{field:"title",tokenize:"forward",encode:t},{field:"tags",tokenize:"forward",encode:t}]});return e.forEach(((e,t)=>{n.add({id:t,title:e.title,content:e.content,tags:e.tags})})),n}async function init(){let e=!0;if(localStorage.getItem("searchIndex")){let{date:t,docs:n}=JSON.parse(localStorage.getItem("searchIndex"));if("2025-11-17T02:36:09.398Z"===t){e=!1;let t=createIndex(n);window.docs=n,window.index=t}}if(e){let e=await(await fetch("/searchIndex.json?v=2025-11-17T02:36:09.398Z")).json(),t=createIndex(e);localStorage.setItem("searchIndex",JSON.stringify({date:"2025-11-17T02:36:09.398Z",docs:e})),window.docs=e,window.index=t}document.addEventListener("keydown",(e=>{if((e.ctrlKey||e.metaKey)&&"k"===e.key&&(e.preventDefault(),toggleSearch()),"Escape"===e.key&&document.getElementById("globalsearch").classList.remove("active"),document.getElementById("globalsearch").classList.contains("active")){if("ArrowDown"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.nextElementSibling?t.nextElementSibling.classList.add("active"):document.querySelector(".searchresult").classList.add("active")):document.querySelector(".searchresult").classList.add("active");let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("ArrowUp"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.previousElementSibling?t.previousElementSibling.classList.add("active"):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling||e.classList.add("active")}))):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling&&e.classList.add("active")}));let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("Enter"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t&&(window.location.href=t.querySelector("a").href)}}}));const t=debounce(search,200,!1);field=document.querySelector("#term"),field.addEventListener("keydown",(e=>{"ArrowDown"!==e.key&&"ArrowUp"!==e.key&&t()})),resultsDiv=document.querySelector("#search-results");const n=new URL(location.href).searchParams;n.get("q")&&(field.setAttribute("value",n.get("q")),toggleSearch(),search())}async function search(){let e=field.value.trim();if(!e)return;if(e==lastSearch)return;console.log(`search for ${e}`),window.lastSearch=e,resultsDiv.innerHTML=loadingSvg;let t=offlineSearch(e),n="";if(!t.length){let t=document.createElement("p");return t.innerText=`No results for "${e}"`,resultsDiv.innerHTML="",void resultsDiv.appendChild(t)}n+='<div style="max-width:100%;">',t.forEach((e=>{e.tags&&e.tags.length>0?n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        <div class="header-meta">\n                            <div class="header-tags">\n                                ${e.tags.map((e=>'<a class="tag" href="JavaScript:Void(0);">#'+e+"</a>")).join("")}\n                            </div>\n                        </div>\n                        ${e.content}\n                    </div>\n                </div>`:n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        ${e.content}\n                    </div>\n                </div>`})),n+="</div>",resultsDiv.innerHTML=n}function truncate(e,t){return(e=e.replaceAll(/<[^>]*>/g,"")).length<t?e:e.substring(0,t-3)+"..."}function offlineSearch(e){let t=window.docs,n="#"===e[0]&&e.length>1?index.search(e.substring(1),[{field:"tags"}]):index.search(e,[{field:"title",limit:5},{field:"content",weight:10}]);const a=e=>{const t=n.filter((t=>t.field===e));return 0===t.length?[]:[...t[0].result]};return[...new Set([...a("title"),...a("content"),...a("tags")])].map((e=>{let n=t[e];return n.content=truncate(n.content,400),n.tags=n.tags.filter((e=>"gardenEntry"!=e&&"note"!=e)),n}))}window.lastSearch=""</script>
 <main class="content cm-s-obsidian">
 <header>
-<h1 data-note-icon="3">Keynote Controls</h1>
+<h1 data-note-icon="2">Open Broadcast Studio</h1>
 <div class="header-meta">
 <div class="header-tags">
 </div>
-<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-11-06T10:01:12.665-05:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2025-11-15T21:24:32.087-05:00"></span></div></div></div>
+<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-11-16T19:20:50.907-05:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2025-11-16T21:18:16.033-05:00"></span></div></div></div>
 </header>
-<p>Keynote Controls is an OBS Python script that enables...</p>
-<ul>
-<li>Navigating Keynote slides with OBS hotkeys</li>
-<li>Syncing OBS Scene changes to Keynote slides</li>
-<li>Scrolling slide presenter notes in an OBS Text Source</li>
-</ul>
-<p><picture src="/img/user/Excalidraw/obs_to_keynote.excalidraw.png" alt="obs_to_keynote.excalidraw.png"><source media="(max-width:480px)" srcset="/img/optimized/Ln8xXhTjOX-461.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/Ln8xXhTjOX-461.jpeg">
-<img class="" src="/img/user/Excalidraw/obs_to_keynote.excalidraw.png" alt="obs_to_keynote.excalidraw.png" width=""></picture></p>
-<h2 id="add-the-keynote-controls-script-to-obs" tabindex="-1">Add the Keynote Controls Script to OBS</h2>
-<p>The &quot;Keynote Controls&quot; script and accompanying OBS Collection can be found on Github.</p>
-<h3 id="import-the-keynote-controls-obs-collection" tabindex="-1">Import the Keynote Controls OBS Collection</h3>
-<ol>
-<li>Download the <a href="https://github.com/UUoocl/Keynote_Controls/blob/main/keynote_controls.json" target="_blank" class="external-link">Keynote Controls Collection</a></li>
-<li>In OBS, from the menu select <code>Scene Collection &gt; Import</code></li>
-<li>Import the collection</li>
-<li>Choose the collection <code>Scene Collection</code></li>
-</ol>
-<h3 id="add-the-keynote-controls-script" tabindex="-1">Add the Keynote Controls Script</h3>
-<ol>
-<li>Download the <a href="https://github.com/UUoocl/Keynote_Controls/blob/main/obs_python_keynote%20osascript.py" target="_blank" class="external-link">Keynote Controls Script</a></li>
-<li>In OBS, from the menu select <code>Tools &gt; Scripts</code></li>
-<li>Click the <code>+ Add script</code> button</li>
-</ol>
-<p>After installing the script, adjust the settings to the camera and slides scene.</p>
-<p>The &quot;Slides&quot; scene includes a &quot;macOS Screen Capture&quot; source to capture the Keynote slides. You can set the 'Display' as needed. Keynote needs to be on the selected display.</p>
-<p><picture src="/img/user/2025-11-06_14-46-18.png" alt="2025-11-06_14-46-18.png"><source media="(max-width:480px)" srcset="/img/optimized/yLe6zQL2bE-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/yLe6zQL2bE-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/yLe6zQL2bE-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/yLe6zQL2bE-700.jpeg"><img class="" src="/img/user/2025-11-06_14-46-18.png" alt="2025-11-06_14-46-18.png" width=""></picture></p>
-<h2 id="using-and-quot-keynote-controls-and-quot" tabindex="-1">Using &quot;Keynote Controls&quot;</h2>
-<p>The script includes OBS Hotkeys.</p>
-<h3 id="navigate-slides" tabindex="-1">Navigate Slides</h3>
-<div class="callout" data-callout="note"><div class="callout-title"><div class="callout-title-inner"> default navigation hotkeys<br></div></div>
+<h2 id="install-obs" tabindex="-1">Install OBS</h2>
+<p>Download the installer from <a href="https://obsproject.com/" target="_blank" class="external-link">obsproject.com</a></p>
+<h2 id="open-obs" tabindex="-1">Open OBS</h2>
+<p>Some of the UUinsome scripts use the OBS webSocket Server.<br>
+To configure the webSocket server use the &quot;open obs&quot; page.</p>
+<p><a href="https://uuoocl.github.io/set-websocket-server/open-obs.html" target="_blank" class="external-link">https://uuoocl.github.io/set-websocket-server/open-obs.html</a></p>
+<div class="callout" data-callout="note"><div class="callout-title"><div class="callout-title-inner">Note</div></div>
 <div class="callout-content">
 <p>
-Start Slide Show = F20<br>
-Next Slide = F13<br>
-Previous Slide = F14</p>
+For macOS users download these shortcuts to automate opening OBS<br>
+<a href="https://www.icloud.com/shortcuts/38fd3fc730a247b28712b0d3a85bb918" target="_blank" class="external-link">Open OBS with Debug mode enabled</a><br>
+<a href="https://www.icloud.com/shortcuts/9b7279e3430a4454b654a513d5645f91" target="_blank" class="external-link">Open OBS with Debug mode disabled</a></p>
 </div></div>
-<h3 id="add-scene-tags-to-slides" tabindex="-1">Add Scene tags to slides</h3>
-<p>Slide &quot;tags&quot; are used to synch OBS scenes and Keynote slides.</p>
-<p>In OBS choose a scene, then press the &quot;Add Scene Tag&quot; hotkey</p>
-<div class="callout" data-callout="note"><div class="callout-title"><div class="callout-title-inner"> default hotkey<br></div></div>
+<h2 id="configure-obs-open-settings" tabindex="-1">Configure OBS open settings</h2>
+<div class="callout" data-callout="note"><div class="callout-title"><div class="callout-title-inner"> OBS open settings<br></div></div>
 <div class="callout-content">
 <p>
-Add Slide tag = F15</p>
+<strong>Configuration name</strong> = give the configuration a name that can be reused</p>
+<p><strong>OBS name</strong> = default set for macOS to &quot;OBS&quot;, change to the full path in windows</p>
+<p><strong>Profile Name</strong> = Enter an OBS video profile</p>
+<p><strong>Collection Name</strong> = Enter an OBS Scene Collection</p>
+<p><strong>WebSocket Server Port</strong> = Enter an available Port number. OBS default 4455. The range 49152-65535 is recommended<br>
+WebSocket Server Password = enter a password of your choosing</p>
+<p><strong>Debug Mode</strong> = check to debug browser source. debug page <a href="http://localhost:9222/" target="_blank" class="external-link">http://localhost:9222/</a></p>
 </div></div>
-<h3 id="adjust-teleprompter" tabindex="-1">Adjust teleprompter</h3>
-<div class="callout" data-callout="note"><div class="callout-title"><div class="callout-title-inner"> default teleprompter hotkeys<br></div></div>
+<div class="callout" data-callout="important"><div class="callout-title"><div class="callout-title-inner">Important</div></div>
 <div class="callout-content">
 <p>
-Increase Font Size = F16<br>
-Decrease Font Size = F17</p>
-<p>Increase Scroll Speed = F18<br>
-Decrease Scroll Speed = F19</p>
+If the macOS shortcuts are imported, press the &quot;Open OBS&quot; button.</p>
+<p>Otherwise press the &quot;Copy Command&quot; button. Open a command line terminal and paster the OBS open command</p>
 </div></div>
-<h2 id="configure-remote-controller" tabindex="-1">Configure Remote Controller</h2>
-<p>The 8-bitDo Micro controller is recommended as an optional slide clicker.<br>
-The 8-bitDo Micro has a &quot;Keyboard&quot; mode which turns the controller into a bluetooth keyboard. The 16 buttons can be configured with the iOS and Android app &quot;Ultimate&quot; from 8-bitDo.</p>
+<p><picture src="/img/user/Pasted%20image%2020251116193840.png" alt="Pasted image 20251116193840.png"><source media="(max-width:480px)" srcset="/img/optimized/CS1Us2YKQv-500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/CS1Us2YKQv-500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/CS1Us2YKQv-529.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/CS1Us2YKQv-529.jpeg"><img class="" src="/img/user/Pasted%20image%2020251116193840.png" alt="Pasted image 20251116193840.png" width=""></picture></p>
+<h2 id="test-the-web-socket-connection" tabindex="-1">Test the WebSocket Connection</h2>
+<p>Press the &quot;Connect&quot; button to connect to the OBS webSocket Server.<br>
+The button will turn green if the connection is successful.</p>
+<p><picture src="/img/user/Pasted%20image%2020251116202043.png" alt="Pasted image 20251116202043.png"><source media="(max-width:480px)" srcset="/img/optimized/7RMYLbGohT-500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/7RMYLbGohT-500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/7RMYLbGohT-518.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/7RMYLbGohT-518.jpeg"><img class="" src="/img/user/Pasted%20image%2020251116202043.png" alt="Pasted image 20251116202043.png" width=""></picture></p>
 </main>
 <aside>
 <div class="sidebar">
@@ -346,25 +327,13 @@ On this page
 <div class="toc-container">
 <nav class="toc">
 <ol>
-<li><a href="#add-the-keynote-controls-script-to-obs">Add the Keynote Controls Script to OBS</a>
-<ol>
-<li><a href="#import-the-keynote-controls-obs-collection">Import the Keynote Controls OBS Collection</a>
+<li><a href="#install-obs">Install OBS</a>
 </li>
-<li><a href="#add-the-keynote-controls-script">Add the Keynote Controls Script</a>
+<li><a href="#open-obs">Open OBS</a>
 </li>
-</ol>
+<li><a href="#configure-obs-open-settings">Configure OBS open settings</a>
 </li>
-<li><a href="#using-and-quot-keynote-controls-and-quot">Using "Keynote Controls"</a>
-<ol>
-<li><a href="#navigate-slides">Navigate Slides</a>
-</li>
-<li><a href="#add-scene-tags-to-slides">Add Scene tags to slides</a>
-</li>
-<li><a href="#adjust-teleprompter">Adjust teleprompter</a>
-</li>
-</ol>
-</li>
-<li><a href="#configure-remote-controller">Configure Remote Controller</a>
+<li><a href="#test-the-web-socket-connection">Test the WebSocket Connection</a>
 </li>
 </ol>
 </nav>
