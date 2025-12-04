@@ -3,82 +3,82 @@
     
         <url>
             <loc>/404.html</loc>
-            <lastmod>2025-12-04T02:33:57.883Z</lastmod>
+            <lastmod>2025-12-04T02:44:49.840Z</lastmod>
         </url>
     
         <url>
             <loc>/</loc>
-            <lastmod>2025-12-04T02:33:57.891Z</lastmod>
+            <lastmod>2025-12-04T02:44:49.847Z</lastmod>
         </url>
     
         <url>
             <loc>/winsome/</loc>
-            <lastmod>2025-12-04T02:33:57.891Z</lastmod>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
-            <loc>/01-system-setup/01-01-open-broadcast-studio/</loc>
-            <lastmod>2025-12-04T02:33:57.891Z</lastmod>
+            <loc>/01-setup/obs/</loc>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
-            <loc>/01-system-setup/01-02-python/</loc>
-            <lastmod>2025-12-04T02:33:57.891Z</lastmod>
+            <loc>/01-setup/python/</loc>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
-            <loc>/02-interfaces/02-01-keyboard-input/</loc>
-            <lastmod>2025-12-04T02:33:57.891Z</lastmod>
+            <loc>/02-interfaces/keyboard/</loc>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
-            <loc>/02-interfaces/02-02-mouse-input/</loc>
-            <lastmod>2025-12-04T02:33:57.891Z</lastmod>
+            <loc>/02-interfaces/mouse/</loc>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
-            <loc>/02-interfaces/02-03-osc-io/</loc>
-            <lastmod>2025-12-04T02:33:57.892Z</lastmod>
+            <loc>/02-interfaces/osc/</loc>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
-            <loc>/02-interfaces/02-04-midi-io/</loc>
-            <lastmod>2025-12-04T02:33:57.892Z</lastmod>
+            <loc>/02-interfaces/midi/</loc>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
-            <loc>/02-interfaces/02-05-python-http-server/</loc>
-            <lastmod>2025-12-04T02:33:57.892Z</lastmod>
+            <loc>/02-interfaces/http/</loc>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
-            <loc>/02-interfaces/02-06-google-apps-scripts/</loc>
-            <lastmod>2025-12-04T02:33:57.892Z</lastmod>
+            <loc>/02-interfaces/gas/</loc>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
             <loc>/03-tutorials/keyboard/</loc>
-            <lastmod>2025-12-04T02:33:57.892Z</lastmod>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
             <loc>/03-tutorials/mouse/</loc>
-            <lastmod>2025-12-04T02:33:57.892Z</lastmod>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
             <loc>/03-tutorials/keynote/</loc>
-            <lastmod>2025-12-04T02:33:57.892Z</lastmod>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
             <loc>/03-tutorials/slidesstudio/</loc>
-            <lastmod>2025-12-04T02:33:57.892Z</lastmod>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
         <url>
             <loc>/stripes/</loc>
-            <lastmod>2025-12-04T02:33:57.892Z</lastmod>
+            <lastmod>2025-12-04T02:44:49.848Z</lastmod>
         </url>
     
 </urlset>

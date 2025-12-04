@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Mouse input</title>
+<title>Python</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -68,51 +68,51 @@ CTRL + K
 <div x-show="isOpen" style="display:none" class="">
 </div>
 <div x-show="isOpen" style="display:none" class="">
-<div class="folder inner-folder" x-data="{isOpen: $persist(false).as('01 System Setup')}" @click.stop="isOpen=!isOpen">
+<div class="folder inner-folder" x-data="{isOpen: $persist(false).as('01 setup')}" @click.stop="isOpen=!isOpen">
 <div class="foldername-wrapper align-icon">
 <i x-show="isOpen" style="display:none" icon-name="chevron-down"></i>
 <i x-show="!isOpen" icon-name="chevron-right"></i>
-<span class="foldername">01 System Setup</span>
+<span class="foldername">01 setup</span>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/01-system-setup/01-01-open-broadcast-studio/">Open Broadcast Studio </a>
+<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/01-setup/obs/">Open Broadcast Studio </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/01-system-setup/01-02-python/">Python </a>
+<div @click.stop class="notelink active-note"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/01-setup/python/">Python </a>
 </div>
 </div>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="">
-<div class="folder inner-folder" x-data="{isOpen: $persist(false).as('02 Interfaces')}" @click.stop="isOpen=!isOpen">
+<div class="folder inner-folder" x-data="{isOpen: $persist(false).as('02 interfaces')}" @click.stop="isOpen=!isOpen">
 <div class="foldername-wrapper align-icon">
 <i x-show="isOpen" style="display:none" icon-name="chevron-down"></i>
 <i x-show="!isOpen" icon-name="chevron-right"></i>
-<span class="foldername">02 Interfaces</span>
+<span class="foldername">02 interfaces</span>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="3" style="text-decoration:none" class="filename" href="/02-interfaces/02-01-keyboard-input/">Keyboard input </a>
-</div>
-</div>
-<div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink active-note"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/02-interfaces/02-02-mouse-input/">Mouse input </a>
+<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/02-interfaces/gas/">Google Apps Script API </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/02-interfaces/02-03-osc-io/">OSC </a>
+<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/02-interfaces/http/">Python HTTP Server </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/02-interfaces/02-04-midi-io/">MIDI </a>
+<div @click.stop class="notelink"><a data-note-icon="3" style="text-decoration:none" class="filename" href="/02-interfaces/keyboard/">Keyboard input </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/02-interfaces/02-05-python-http-server/">Python HTTP Server </a>
+<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/02-interfaces/midi/">MIDI </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/02-interfaces/02-06-google-apps-scripts/">Google Apps Script API </a>
+<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/02-interfaces/mouse/">Mouse input </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink"><a data-note-icon="2" style="text-decoration:none" class="filename" href="/02-interfaces/osc/">OSC </a>
 </div>
 </div>
 </div>
@@ -169,60 +169,91 @@ CTRL + K
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
-<script>document.addEventListener("DOMContentLoaded",init,!1),document.addEventListener("DOMContentLoaded",setCorrectShortcut,!1),window.toggleSearch=function(){document.getElementById("globalsearch").classList.contains("active")?document.getElementById("globalsearch").classList.remove("active"):(document.getElementById("globalsearch").classList.add("active"),document.getElementById("term").focus())},window.toggleTagSearch=function(e){console.log(e.textContent);const t=e.textContent;t&&(window.document.getElementById("term").value=t.trim(),window.toggleSearch(),window.search())};const loadingSvg='\n    <svg width="100" height="100" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" stroke="#fff">\n      <g fill="none" fill-rule="evenodd" transform="translate(1 1)" stroke-width="2">\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="1.5s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="1.5s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="1.5s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="3s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="3s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="3s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="8">\n              <animate attributeName="r"\n                   begin="0s" dur="1.5s"\n                   values="6;1;2;3;4;5;6"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n      </g>\n  </svg>';function debounce(e,t,n){var a;return function(){var r=this,i=arguments,c=n&&!a;clearTimeout(a),a=setTimeout((function(){a=null,n||e.apply(r,i)}),t),c&&e.apply(r,i)}}function setCorrectShortcut(){navigator.platform.toUpperCase().indexOf("MAC")>=0&&document.querySelectorAll(".search-keys").forEach((e=>e.innerHTML="⌘ + K"))}function createIndex(e){const t=e=>e.toLowerCase().split(/([^a-z]|[^\x00-\x7F])/),n=new FlexSearch.Document({cache:!0,charset:"latin:extra",optimize:!0,index:[{field:"content",tokenize:"reverse",encode:t},{field:"title",tokenize:"forward",encode:t},{field:"tags",tokenize:"forward",encode:t}]});return e.forEach(((e,t)=>{n.add({id:t,title:e.title,content:e.content,tags:e.tags})})),n}async function init(){let e=!0;if(localStorage.getItem("searchIndex")){let{date:t,docs:n}=JSON.parse(localStorage.getItem("searchIndex"));if("2025-12-04T02:34:09.095Z"===t){e=!1;let t=createIndex(n);window.docs=n,window.index=t}}if(e){let e=await(await fetch("/searchIndex.json?v=2025-12-04T02:34:09.095Z")).json(),t=createIndex(e);localStorage.setItem("searchIndex",JSON.stringify({date:"2025-12-04T02:34:09.095Z",docs:e})),window.docs=e,window.index=t}document.addEventListener("keydown",(e=>{if((e.ctrlKey||e.metaKey)&&"k"===e.key&&(e.preventDefault(),toggleSearch()),"Escape"===e.key&&document.getElementById("globalsearch").classList.remove("active"),document.getElementById("globalsearch").classList.contains("active")){if("ArrowDown"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.nextElementSibling?t.nextElementSibling.classList.add("active"):document.querySelector(".searchresult").classList.add("active")):document.querySelector(".searchresult").classList.add("active");let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("ArrowUp"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.previousElementSibling?t.previousElementSibling.classList.add("active"):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling||e.classList.add("active")}))):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling&&e.classList.add("active")}));let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("Enter"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t&&(window.location.href=t.querySelector("a").href)}}}));const t=debounce(search,200,!1);field=document.querySelector("#term"),field.addEventListener("keydown",(e=>{"ArrowDown"!==e.key&&"ArrowUp"!==e.key&&t()})),resultsDiv=document.querySelector("#search-results");const n=new URL(location.href).searchParams;n.get("q")&&(field.setAttribute("value",n.get("q")),toggleSearch(),search())}async function search(){let e=field.value.trim();if(!e)return;if(e==lastSearch)return;console.log(`search for ${e}`),window.lastSearch=e,resultsDiv.innerHTML=loadingSvg;let t=offlineSearch(e),n="";if(!t.length){let t=document.createElement("p");return t.innerText=`No results for "${e}"`,resultsDiv.innerHTML="",void resultsDiv.appendChild(t)}n+='<div style="max-width:100%;">',t.forEach((e=>{e.tags&&e.tags.length>0?n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        <div class="header-meta">\n                            <div class="header-tags">\n                                ${e.tags.map((e=>'<a class="tag" href="JavaScript:Void(0);">#'+e+"</a>")).join("")}\n                            </div>\n                        </div>\n                        ${e.content}\n                    </div>\n                </div>`:n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        ${e.content}\n                    </div>\n                </div>`})),n+="</div>",resultsDiv.innerHTML=n}function truncate(e,t){return(e=e.replaceAll(/<[^>]*>/g,"")).length<t?e:e.substring(0,t-3)+"..."}function offlineSearch(e){let t=window.docs,n="#"===e[0]&&e.length>1?index.search(e.substring(1),[{field:"tags"}]):index.search(e,[{field:"title",limit:5},{field:"content",weight:10}]);const a=e=>{const t=n.filter((t=>t.field===e));return 0===t.length?[]:[...t[0].result]};return[...new Set([...a("title"),...a("content"),...a("tags")])].map((e=>{let n=t[e];return n.content=truncate(n.content,400),n.tags=n.tags.filter((e=>"gardenEntry"!=e&&"note"!=e)),n}))}window.lastSearch=""</script>
+<script>document.addEventListener("DOMContentLoaded",init,!1),document.addEventListener("DOMContentLoaded",setCorrectShortcut,!1),window.toggleSearch=function(){document.getElementById("globalsearch").classList.contains("active")?document.getElementById("globalsearch").classList.remove("active"):(document.getElementById("globalsearch").classList.add("active"),document.getElementById("term").focus())},window.toggleTagSearch=function(e){console.log(e.textContent);const t=e.textContent;t&&(window.document.getElementById("term").value=t.trim(),window.toggleSearch(),window.search())};const loadingSvg='\n    <svg width="100" height="100" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" stroke="#fff">\n      <g fill="none" fill-rule="evenodd" transform="translate(1 1)" stroke-width="2">\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="1.5s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="1.5s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="1.5s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="3s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="3s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="3s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="8">\n              <animate attributeName="r"\n                   begin="0s" dur="1.5s"\n                   values="6;1;2;3;4;5;6"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n      </g>\n  </svg>';function debounce(e,t,n){var a;return function(){var r=this,i=arguments,c=n&&!a;clearTimeout(a),a=setTimeout((function(){a=null,n||e.apply(r,i)}),t),c&&e.apply(r,i)}}function setCorrectShortcut(){navigator.platform.toUpperCase().indexOf("MAC")>=0&&document.querySelectorAll(".search-keys").forEach((e=>e.innerHTML="⌘ + K"))}function createIndex(e){const t=e=>e.toLowerCase().split(/([^a-z]|[^\x00-\x7F])/),n=new FlexSearch.Document({cache:!0,charset:"latin:extra",optimize:!0,index:[{field:"content",tokenize:"reverse",encode:t},{field:"title",tokenize:"forward",encode:t},{field:"tags",tokenize:"forward",encode:t}]});return e.forEach(((e,t)=>{n.add({id:t,title:e.title,content:e.content,tags:e.tags})})),n}async function init(){let e=!0;if(localStorage.getItem("searchIndex")){let{date:t,docs:n}=JSON.parse(localStorage.getItem("searchIndex"));if("2025-12-04T02:45:05.889Z"===t){e=!1;let t=createIndex(n);window.docs=n,window.index=t}}if(e){let e=await(await fetch("/searchIndex.json?v=2025-12-04T02:45:05.889Z")).json(),t=createIndex(e);localStorage.setItem("searchIndex",JSON.stringify({date:"2025-12-04T02:45:05.889Z",docs:e})),window.docs=e,window.index=t}document.addEventListener("keydown",(e=>{if((e.ctrlKey||e.metaKey)&&"k"===e.key&&(e.preventDefault(),toggleSearch()),"Escape"===e.key&&document.getElementById("globalsearch").classList.remove("active"),document.getElementById("globalsearch").classList.contains("active")){if("ArrowDown"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.nextElementSibling?t.nextElementSibling.classList.add("active"):document.querySelector(".searchresult").classList.add("active")):document.querySelector(".searchresult").classList.add("active");let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("ArrowUp"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.previousElementSibling?t.previousElementSibling.classList.add("active"):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling||e.classList.add("active")}))):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling&&e.classList.add("active")}));let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("Enter"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t&&(window.location.href=t.querySelector("a").href)}}}));const t=debounce(search,200,!1);field=document.querySelector("#term"),field.addEventListener("keydown",(e=>{"ArrowDown"!==e.key&&"ArrowUp"!==e.key&&t()})),resultsDiv=document.querySelector("#search-results");const n=new URL(location.href).searchParams;n.get("q")&&(field.setAttribute("value",n.get("q")),toggleSearch(),search())}async function search(){let e=field.value.trim();if(!e)return;if(e==lastSearch)return;console.log(`search for ${e}`),window.lastSearch=e,resultsDiv.innerHTML=loadingSvg;let t=offlineSearch(e),n="";if(!t.length){let t=document.createElement("p");return t.innerText=`No results for "${e}"`,resultsDiv.innerHTML="",void resultsDiv.appendChild(t)}n+='<div style="max-width:100%;">',t.forEach((e=>{e.tags&&e.tags.length>0?n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        <div class="header-meta">\n                            <div class="header-tags">\n                                ${e.tags.map((e=>'<a class="tag" href="JavaScript:Void(0);">#'+e+"</a>")).join("")}\n                            </div>\n                        </div>\n                        ${e.content}\n                    </div>\n                </div>`:n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        ${e.content}\n                    </div>\n                </div>`})),n+="</div>",resultsDiv.innerHTML=n}function truncate(e,t){return(e=e.replaceAll(/<[^>]*>/g,"")).length<t?e:e.substring(0,t-3)+"..."}function offlineSearch(e){let t=window.docs,n="#"===e[0]&&e.length>1?index.search(e.substring(1),[{field:"tags"}]):index.search(e,[{field:"title",limit:5},{field:"content",weight:10}]);const a=e=>{const t=n.filter((t=>t.field===e));return 0===t.length?[]:[...t[0].result]};return[...new Set([...a("title"),...a("content"),...a("tags")])].map((e=>{let n=t[e];return n.content=truncate(n.content,400),n.tags=n.tags.filter((e=>"gardenEntry"!=e&&"note"!=e)),n}))}window.lastSearch=""</script>
 <main class="content cm-s-obsidian">
 <header>
-<h1 data-note-icon="2">Mouse input</h1>
+<h1 data-note-icon="2">Python</h1>
 <div class="header-meta">
 <div class="header-tags">
 </div>
-<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-11-07T09:37:46.179-05:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2025-12-02T20:21:37.991-05:00"></span></div></div></div>
+<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2025-11-15T14:15:03.278-05:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2025-12-03T21:43:54.686-05:00"></span></div></div></div>
 </header>
-<p>Monitor mouse clicks, position and scroll.</p>
-<ul>
-<li>Send position to a Text source.</li>
-<li>Send clicks for mouse button 1, 2 and 3 to a Text source.</li>
-<li>Send horizontal and veritcal scroll to a Text source.</li>
-</ul>
-<h2 id="script-process" tabindex="-1">Script Process</h2>
-<p>The mouse input values are passed to a Text source.</p>
-<p>The User creates text sources to store and display incoming position, click and scroll values.</p>
-<p>A text source is used because changes to a text source are easily observed by WebSocket clients. When a text source is updated an &quot;InputSettingsChanged&quot; event is sent to webSocket clients. See the <a class="internal-link is-unresolved" href="/404" target="">Mouse Overlay Example</a> tutorial for a complete example.</p>
-<p><picture src="/img/user/Excalidraw/Mouse%20input.excalidraw.png" alt="Mouse input.excalidraw.png"><source media="(max-width:480px)" srcset="/img/optimized/udACiR_rpn-461.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/udACiR_rpn-461.jpeg">
-<img class="" src="/img/user/Excalidraw/Mouse%20input.excalidraw.png" alt="Mouse input.excalidraw.png" width=""></picture></p>
-<h2 id="setup" tabindex="-1">Setup</h2>
-<h3 id="install-python-dependencies" tabindex="-1">Install Python dependencies</h3>
-<p>This script uses the <a href="https://pypi.org/project/pynput/" target="_blank" class="external-link"><code>Pynput</code></a> Library.</p>
+<p>Python is a programming language that will need to be installed for the many of the tools in this garden to work.</p>
+<h2 id="install-python" tabindex="-1">Install Python</h2>
+<p>OBS supports python version 3.11 . It's important that Python 3.11 is installed. Newer versions are available, but these newer versions may not work.</p>
+<div class="callout" data-callout="note"><div class="callout-title"><div class="callout-title-inner">Note</div></div>
+<div class="callout-content">
+<p>
+<a href="https://www.python.org/downloads/release/python-3119/" target="_blank" class="external-link">Download and Install Python version 3.11</a></p>
+</div></div>
+<ol>
+<li>Download the MacOS installer</li>
+<li>Install Python 3.11 to the default location</li>
+</ol>
+<h2 id="install-python-dependencies" tabindex="-1">Install Python dependencies</h2>
+<p>Some scripts in the garden use libraries. Enter the following command to install all the libraries</p>
 <ol>
 <li>Open the Terminal app</li>
 <li>Enter the <code>pip</code> command</li>
 </ol>
-<pre><code> python3.11 -m pip install pynput 
+<pre><code>python3.11 -m pip install python-osc python-rtmidi simpleobsws pynput
 </code></pre>
-<h2 id="add-the-mouse-input-script-to-obs" tabindex="-1">Add the Mouse Input Script to OBS</h2>
-<p>The &quot;Mouse Input&quot; script and accompanying OBS Collection can be found on Github.<br>
-<a href="https://github.com/UUoocl/mouse_input" target="_blank" class="external-link">python mouse input repo</a></p>
-<h3 id="import-the-mouse-input-obs-collection" tabindex="-1">Import the Mouse Input OBS Collection</h3>
+<h3 id="configure-obs-python-settings" tabindex="-1">Configure OBS Python Settings</h3>
+<p>OBS needs to know where Python is installed. Use the macOS Terminal app to find the Python install path. Then enter the Python install path in OBS</p>
 <ol>
-<li>Download the <a href="https://github.com/UUoocl/mouse_input" target="_blank" class="external-link">Mouse input Collection</a></li>
-<li>In OBS, from the menu select <code>Scene Collection &gt; Import</code></li>
-<li>Import the collection</li>
-<li>Choose the collection <code>Scene Collection</code></li>
+<li>Open the Terminal app</li>
+<li>Enter the 'which' command</li>
 </ol>
-<h3 id="add-the-script" tabindex="-1">Add the Script</h3>
-<ol>
-<li>Download the <a href="https://github.com/UUoocl/mouse_input" target="_blank" class="external-link">Mouse Input Script</a></li>
-<li>In OBS, from the menu select <code>Tools &gt; Scripts</code></li>
-<li>Click the <code>+ Add script</code> button</li>
+<pre><code class="language-shell">which python3.11
+</code></pre>
+<p>The default install path will be returned</p>
+<div class="callout" data-callout="example"><div class="callout-title"><div class="callout-title-inner"> example response<br></div></div>
+<div class="callout-content">
+<p>
+<code>/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11</code></p>
+</div></div>
+<ol start="3">
+<li>
+<p>Use the mouse to highlight the path</p>
+</li>
+<li>
+<p>Right click and select &quot;Copy&quot;</p>
+</li>
+<li>
+<p>Open OBS</p>
+</li>
+<li>
+<p>From the menu bar select <code>Tools &gt; Scripts</code></p>
+</li>
+<li>
+<p>In the Scripts window switch to the <code>Python Settings</code> tab</p>
+</li>
+<li>
+<p>Click the &quot;Browse&quot; button</p>
+</li>
+<li>
+<p>Use the keyboard shortcut <code>cmd + shift + G</code></p>
+</li>
+<li>
+<p>In the pop-up, right click in the &quot;Go To Folder&quot; input field</p>
+</li>
+<li>
+<p>select paste<br>
+<picture src="/img/user/Pasted%20image%2020251106140904.png" alt="Pasted image 20251106140904.png"><source media="(max-width:480px)" srcset="/img/optimized/22VDcrFB0f-439.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/22VDcrFB0f-439.jpeg">
+<img class="" src="/img/user/Pasted%20image%2020251106140904.png" alt="Pasted image 20251106140904.png" width=""></picture></p>
+</li>
+<li>
+<p>Press &quot;Enter&quot;</p>
+</li>
+<li>
+<p>Click the &quot;Open&quot; button<br>
+The Pythons settings should now display &quot;Loaded Python Version: 3.11&quot;<br>
+<picture src="/img/user/Pasted%20image%2020251106141241.png" alt="Pasted image 20251106141241.png|300" width="300px"><source media="(max-width:480px)" srcset="/img/optimized/nOUHlH7Ei3-500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/nOUHlH7Ei3-500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/nOUHlH7Ei3-520.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/nOUHlH7Ei3-520.jpeg"><img class="" src="/img/user/Pasted%20image%2020251106141241.png" alt="Pasted image 20251106141241.png|300" width="300px"></picture></p>
+</li>
 </ol>
-<h2 id="configure-osc-server-and-clients" tabindex="-1">Configure OSC Server and Clients</h2>
-<h3 id="configure-text-source" tabindex="-1">Configure Text Source</h3>
-<div class="callout" data-callout="note"><div class="callout-title"><div class="callout-title-inner"> Choose Source</div></div></div>
-<p>Check the mouse inputs to monitor.</p>
-<p><picture src="/img/user/Pasted%20image%2020251122153358.png" alt="Pasted image 20251122153358.png"><source media="(max-width:480px)" srcset="/img/optimized/wKZfkxZXjX-307.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/wKZfkxZXjX-307.jpeg">
-<img class="" src="/img/user/Pasted%20image%2020251122153358.png" alt="Pasted image 20251122153358.png" width=""></picture></p>
 </main>
 <aside>
 <div class="sidebar">
@@ -236,25 +267,11 @@ On this page
 <div class="toc-container">
 <nav class="toc">
 <ol>
-<li><a href="#script-process">Script Process</a>
+<li><a href="#install-python">Install Python</a>
 </li>
-<li><a href="#setup">Setup</a>
-<ol>
 <li><a href="#install-python-dependencies">Install Python dependencies</a>
-</li>
-</ol>
-</li>
-<li><a href="#add-the-mouse-input-script-to-obs">Add the Mouse Input Script to OBS</a>
 <ol>
-<li><a href="#import-the-mouse-input-obs-collection">Import the Mouse Input OBS Collection</a>
-</li>
-<li><a href="#add-the-script">Add the Script</a>
-</li>
-</ol>
-</li>
-<li><a href="#configure-osc-server-and-clients">Configure OSC Server and Clients</a>
-<ol>
-<li><a href="#configure-text-source">Configure Text Source</a>
+<li><a href="#configure-obs-python-settings">Configure OBS Python Settings</a>
 </li>
 </ol>
 </li>
