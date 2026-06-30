@@ -1,14 +1,10 @@
 {
   "/": [
-    "01 setup",
     "02 interfaces",
+    "01 setup",
     "03 Tutorials",
     "00.01 UUoocl",
     "winsome"
-  ],
-  "/01 setup": [
-    "python",
-    "obs"
   ],
   "/02 interfaces": [
     "gas",
@@ -17,6 +13,10 @@
     "midi",
     "mouse",
     "osc"
+  ],
+  "/01 setup": [
+    "python",
+    "obs"
   ],
   "/03 Tutorials": [
     "keyboard",
