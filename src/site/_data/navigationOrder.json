@@ -1,0 +1,32 @@
+{
+  "/": [
+    "01 setup",
+    "02 interfaces",
+    "03 Tutorials",
+    "00.01 UUoocl",
+    "winsome"
+  ],
+  "/01 setup": [
+    "python",
+    "obs"
+  ],
+  "/02 interfaces": [
+    "gas",
+    "http",
+    "keyboard",
+    "midi",
+    "mouse",
+    "osc"
+  ],
+  "/03 Tutorials": [
+    "keyboard",
+    "keyboard_stripes",
+    "keynote",
+    "mouse",
+    "slidesstudio",
+    "slidesstudio-gh",
+    "slidesstudio-obsidian",
+    "slidesstudio-py",
+    "slidesstudioplugin"
+  ]
+}
