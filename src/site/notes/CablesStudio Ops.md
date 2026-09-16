@@ -1,64 +1,110 @@
 ---
-{"dg-publish":true,"permalink":"/cables-studio-ops/","noteIcon":"default","created":"2026-07-02T18:04:45.414-04:00","updated":"2026-07-03T22:08:53.429-04:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/cables-studio-ops/","noteIcon":"default","created":"2026-07-02T18:04:45.414-04:00","updated":"2026-07-04T12:12:33.186-04:00","dg-note-properties":{}}
 ---
 
-
-## N-API direct ops
+## Ops
 
 -  [x] Mouse Monitor
--  [x] Mouse Controller
+	-  [x] N-API 
+	-  [x] Swift
+	-  [x] Python
+ -  [x] Mouse Controller
+	-  [x] N-API 
+	-  [x] Swift
+	-  [x] Python
 -  [x] Keyboard Monitor
+	-  [x] N-API 
+	-  [x] Swift
+	-  [x] Python
 -  [x] Keyboard controller
+	-  [x] N-API 
+	-  [x] Swift
+	-  [x] Python
 -  [x] StreamDeck 15 key
-    -  [x] Texture to Key
-    -  [x] Texture across all keys
+    -  Texture to Key
+		-  [x] N-API 
+		-  [ ] Swift
+		-  [ ] Python
+    -  Texture across all keys
+		-  [x] N-API 
+		-  [ ] Swift
+		-  [ ] Python
 -  [x] Soomfon Stream Controller  SE
-    -  [x] Texture to Key
-    -  [x] Texture across all keys
+    -  Texture to Key
+		-  [x] N-API 
+		-  [ ] Swift
+		-  [ ] Python
+    -  Texture across all keys
+		-  [x] N-API 
+		-  [ ] Swift
+		-  [ ] Python
 -  [x] [[8BitDoXbox \|8BitDoXbox ]]
+	-  [x] N-API 
+	-  [x] Swift
+	-  [ ] Python
 -  [x] BmdSpeedEditor 
+	-  [x] N-API 
+	-  [x] Swift
+	-  [ ] Python
 -  [x] ContourShuttlePro
+	-  [x] N-API 
+	-  [x] Swift
+	-  [ ] Python
 -  [x] ContourShuttleXpress
+	-  [x] N-API 
+	-  [x] Swift
+	-  [ ] Python
 -  [x] HumanFace
+	-  [x] N-API 
+	-  [x] Swift
+	-  [ ] Python
 -  [x] HumanHand
+	-  [x] N-API 
+	-  [x] Swift
+	-  [ ] Python
 -  [x] HumanPose2d
+	-  [x] N-API 
+	-  [x] Swift
+	-  [ ] Python
 -  [x] HumanPose3d
+	-  [x] N-API 
+	-  [x] Swift
+	-  [ ] Python
 -  [x] PersonSegmentation
--  [x] ❌ScreenCaptureKitAudio
-	- [op Ops.Extension.Standalone.AppleFrameworks.ScreenCaptureKitAudio] [ScreenCaptureKitAudio] Native addon binary not found at: ops/Ops.Extension.Standalone.AppleFrameworks/Ops.Extension.Standalone.AppleFrameworks.ScreenCaptureKitAudio/screen_capture_audio.node
--  [x] ❌ScreenCaptureKitVideo
--  [x] ❌SpeechToText
-	- crashes patch on adding op
--  [x] ❌UvcController
-	- [op Ops.Extension.Standalone.AppleFrameworks.UvcController] [UvcController] Failed to execute JSON command: Unexpected end of JSON input
-
-## Swift sidecar ops
+	-  [x] N-API 
+	-  [x] ❌Swift
+		- ❌ Failed to wrap IOSurface in CVPixelBuffer. Status: -6661
+	-  [ ] Python
+-  [x] ScreenCaptureKitAudio
+	-  [x] ❌N-API
+		- [op Ops.Extension.Standalone.AppleFrameworks.ScreenCaptureKitAudio] [ScreenCaptureKitAudio] Native addon binary not found at: ops/Ops.Extension.Standalone.AppleFrameworks/Ops.Extension.Standalone.AppleFrameworks.ScreenCaptureKitAudio/screen_capture_audio.node
+	-  [ ] Swift
+	-  [ ] Python
+-  [x]ScreenCaptureKitVideo
+	-  [x]  ❌N-API 
+	-  [ ] Swift
+	-  [ ] Python
+-  [x] SpeechToText
+	-  [x]  ❌N-API 
+	-  [x] Swift
+	-  [ ] Python
+-  [x] [[UVC Util Controller\|UvcController]]
+	-  [x]  ❌N-API 
+	-  [x] Swift
+	-  [ ] Python
+		- [op Ops.Extension.Standalone.AppleFrameworks.UvcController] [UvcController] Failed to execute JSON command: Unexpected end of JSON input
 -  [x] UlanziControllerD100H [[Ulanzi D100H Controller\|Ulanzi D100H Controller]]
--  [ ] Mouse Monitor
--  [ ] Mouse Controller
--  [ ] Keyboard Monitor
--  [ ] Keyboard controller
--  [ ] StreamDeck 15 key
-    -  [ ] Texture to Key
-    -  [ ] Texture across all keys
--  [ ] Soomfon Stream Controller  SE
-    -  [ ] Texture to Key
-    -  [ ] Texture across all keys
--  [x] 8BitDoXbox 
--  [ ] BmdSpeedEditor 
--  [ ] ContourShuttlePro
--  [ ] ContourShuttleXpress
--  [ ] HumanFace
--  [ ] HumanHand
--  [ ] HumanPose2d
--  [ ] HumanPose3d
--  [x] ❌PersonSegmentation
-	- ws failed to load
--  [ ] ScreenCaptureKitAudio
--  [ ] ScreenCaptureKitVideo
--  [ ] SpeechToText
+	-  [x] ❌N-API 
+	-  [x] Swift
+	-  [ ] Python
 -  [x] SyphonIn
-	- pause every second
+	-  [x] ❌N-API 
+	-  [x] Swift
+		- pause every second
 -  [x] SyphonOut
-
--  [x] UvcController
+	-  [x] ❌N-API 
+	-  [x] Swift
+-  [x] ActiveApp
+	-  [x] ❌N-API 
+	-  [x] Swift
+	-  [ ] Python
