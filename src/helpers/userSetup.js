@@ -7,6 +7,7 @@ function userEleventySetup(eleventyConfig) {
   // Feel free to add any plugin you want here instead of /.eleventy.js
   eleventyConfig.ignores.add("src/site/slides/**/*.md");
   eleventyConfig.addPassthroughCopy("src/site/slides");
+  eleventyConfig.addPassthroughCopy({ "src/site/slides/Test-Deck": "slides/demo-deck" });
 }
 exports.userMarkdownSetup = userMarkdownSetup;
 exports.userEleventySetup = userEleventySetup;
