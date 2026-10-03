@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <!-- Preload is necessary because we show these images when we disconnect from the server,
+    but at that point we cannot load these images from the server -->
+    <link rel="preload" href="./assets/gradient-yHQUC_QB.png" as="image" />
+    <link rel="preload" href="./assets/noise-60BoTA8O.png" as="image" />
+    <!-- Preload the fonts -->
+    <link rel="preload" href="./assets/Lora-VariableFont_wght-CZceb_kH.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Regular-Bam3NpBI.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Bold-C_DwAp7Z.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Regular-CEsLFVD9.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Medium-D5MAsWEG.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Bold-C6PDArdf.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="a marimo app" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <script data-marimo="true">
+      function __resizeIframe(obj) {
+        const scrollbarHeight = 20; // Max between windows, mac, and linux
+
+        function setHeight() {
+          // Guard against race condition where iframe isn't ready
+          if (!obj.contentWindow?.document?.documentElement) {
+            return;
+          }
+          const element = obj.contentWindow.document.documentElement;
+          // If there is no vertical scrollbar, we don't need to resize the iframe
+          if (element.scrollHeight === element.clientHeight) {
+            return;
+          }
+
+          // Create a new height that includes the scrollbar height if it's visible
+          const hasHorizontalScrollbar = element.scrollWidth > element.clientWidth;
+          const newHeight = element.scrollHeight + (hasHorizontalScrollbar ? scrollbarHeight : 0);
+
+          // Only update the height if it's different from the current height
+          if (obj.style.height !== `${newHeight}px`) {
+            obj.style.height = `${newHeight}px`;
+          }
+        }
+
+        // Resize the iframe to the height of the content and bottom scrollbar height
+        setHeight();
+
+        // Resize the iframe when the content changes
+        const resizeObserver = new ResizeObserver((_entries) => {
+          setHeight();
+        });
+        // Only observe if iframe content is ready
+        if (obj.contentWindow?.document?.body) {
+          resizeObserver.observe(obj.contentWindow.document.body);
+        }
+      }
+    </script>
+    <marimo-filename hidden>notebook.py</marimo-filename>
+    <!-- TODO(Trevor): Legacy, required by VS Code plugin. Remove when plugin is updated (see marimo/server/_templates/template.py) -->
+    <marimo-version data-version="{{ version }}" hidden></marimo-version>
+    <marimo-user-config data-config="{{ user_config }}" hidden></marimo-user-config>
+    <marimo-server-token data-token="{{ server_token }}" hidden></marimo-server-token>
+    <!-- /TODO -->
+    <title>ExportTest</title>
+    <script type="module" crossorigin src="./assets/index-DafnX1Xx.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-B0Z9INg1.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-CUdNIagt.js">
+    <link rel="modulepreload" crossorigin href="./assets/compiler-runtime-BQ9S8nyo.js">
+    <link rel="modulepreload" crossorigin href="./assets/useEvent-Dc9HkKI2.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-dom-CKsE8sC1.js">
+    <link rel="modulepreload" crossorigin href="./assets/schemas-BL-NsLlF.js">
+    <link rel="modulepreload" crossorigin href="./assets/isObject-BCaOs5rp.js">
+    <link rel="modulepreload" crossorigin href="./assets/isSymbol-oX0TOjjx.js">
+    <link rel="modulepreload" crossorigin href="./assets/now-Cmx0b_zA.js">
+    <link rel="modulepreload" crossorigin href="./assets/debounce-aFmHgJZY.js">
+    <link rel="modulepreload" crossorigin href="./assets/isArrayLikeObject-DnwgSs_Z.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseMerge-CQpUq7ep.js">
+    <link rel="modulepreload" crossorigin href="./assets/objects-snlMn4yk.js">
+    <link rel="modulepreload" crossorigin href="./assets/jsx-runtime-B74pBk57.js">
+    <link rel="modulepreload" crossorigin href="./assets/useEventListener-BdZUApHd.js">
+    <link rel="modulepreload" crossorigin href="./assets/invariant-Ci2dTZ72.js">
+    <link rel="modulepreload" crossorigin href="./assets/config-BxZgoFvi.js">
+    <link rel="modulepreload" crossorigin href="./assets/utils-B4K466FK.js">
+    <link rel="modulepreload" crossorigin href="./assets/session-DXKMv4Bs.js">
+    <link rel="modulepreload" crossorigin href="./assets/Deferred-CrTnjj37.js">
+    <link rel="modulepreload" crossorigin href="./assets/config-DpGPGznL.js">
+    <link rel="modulepreload" crossorigin href="./assets/clsx-DB0hHKMi.js">
+    <link rel="modulepreload" crossorigin href="./assets/cn-ldLVeaqm.js">
+    <link rel="modulepreload" crossorigin href="./assets/fullscreen-BmzAqMKq.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CyYN7zJg.js">
+    <link rel="modulepreload" crossorigin href="./assets/menu-items-BBdeXCvU.js">
+    <link rel="modulepreload" crossorigin href="./assets/use-restore-focus-B98SEiGc.js">
+    <link rel="modulepreload" crossorigin href="./assets/button-BoklZTGL.js">
+    <link rel="modulepreload" crossorigin href="./assets/createLucideIcon-rHn2EdoM.js">
+    <link rel="modulepreload" crossorigin href="./assets/check-Wea4hZ6R.js">
+    <link rel="modulepreload" crossorigin href="./assets/context-BFOBKCJB.js">
+    <link rel="modulepreload" crossorigin href="./assets/useNumberFormatter-C4-_TnkF.js">
+    <link rel="modulepreload" crossorigin href="./assets/select-BplWpfFo.js">
+    <link rel="modulepreload" crossorigin href="./assets/circle-CeQt3rdW.js">
+    <link rel="modulepreload" crossorigin href="./assets/toast-KNfsFUiB.js">
+    <link rel="modulepreload" crossorigin href="./assets/tooltip-DR2Z2N4w.js">
+    <link rel="modulepreload" crossorigin href="./assets/paths-CzfpItSz.js">
+    <link rel="modulepreload" crossorigin href="./assets/useLifecycle-DKSBdWUf.js">
+    <link rel="modulepreload" crossorigin href="./assets/toDate-BbJ1_N2T.js">
+    <link rel="modulepreload" crossorigin href="./assets/database-zap-CrkOvbyN.js">
+    <link rel="modulepreload" crossorigin href="./assets/alert-dialog-CeE3i3Qa.js">
+    <link rel="modulepreload" crossorigin href="./assets/arrays-BqUx5USx.js">
+    <link rel="modulepreload" crossorigin href="./assets/once-Haz_uxEL.js">
+    <link rel="modulepreload" crossorigin href="./assets/numbers-DsgsDslU.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDebounce-DMbg9X18.js">
+    <link rel="modulepreload" crossorigin href="./assets/input-BDakodZ2.js">
+    <link rel="modulepreload" crossorigin href="./assets/use-toast-CC89xOwH.js">
+    <link rel="modulepreload" crossorigin href="./assets/requests-yTHMxhVa.js">
+    <link rel="modulepreload" crossorigin href="./assets/uuid-k9DpjH68.js">
+    <link rel="modulepreload" crossorigin href="./assets/write-secret-modal-BiG2tahJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/plus-gbN72xHe.js">
+    <link rel="modulepreload" crossorigin href="./assets/trash-2-BJG-7Qob.js">
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-HclGiUj8.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BczecT6V.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BTskHGpb.js">
+    <link rel="modulepreload" crossorigin href="./assets/capabilities-Bj3s1hGN.js">
+    <link rel="modulepreload" crossorigin href="./assets/cjs-C49f7GXV.js">
+    <link rel="modulepreload" crossorigin href="./assets/createReducer-BPvK7C_R.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Ccyblc8N.js">
+    <link rel="modulepreload" crossorigin href="./assets/marked.esm-B_3iMIUq.js">
+    <link rel="modulepreload" crossorigin href="./assets/strings-BHZPE0Mc.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BN-7G8qZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/badge-DFf033uX.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CiUBikfn.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-MRn68vX1.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Bviq_Dee.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-DBqBVprh.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-DueXZKz9.js">
+    <link rel="modulepreload" crossorigin href="./assets/stex-CJTNBbet.js">
+    <link rel="modulepreload" crossorigin href="./assets/useTheme-DcnXlv0_.js">
+    <link rel="modulepreload" crossorigin href="./assets/useAsyncData-DucTwMkf.js">
+    <link rel="modulepreload" crossorigin href="./assets/purify.es-CYRiAeUx.js">
+    <link rel="modulepreload" crossorigin href="./assets/cells-CzugpTQu.js">
+    <link rel="modulepreload" crossorigin href="./assets/get-DjNf4SIX.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-RyCOE8jo.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-BhJktFeI.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-icon-DFhUGBjO.js">
+    <link rel="modulepreload" crossorigin href="./assets/ErrorBoundary-BeE1cdgM.js">
+    <link rel="modulepreload" crossorigin href="./assets/config-B4VJJibu.js">
+    <link rel="modulepreload" crossorigin href="./assets/chevron-right-DOPs2jx8.js">
+    <link rel="modulepreload" crossorigin href="./assets/dropdown-menu-VuyoeQOD.js">
+    <link rel="modulepreload" crossorigin href="./assets/LazyAnyLanguageCodeMirror-B_IYTCX5.js">
+    <link rel="modulepreload" crossorigin href="./assets/hat-glasses-DVgK5i5l.js">
+    <link rel="modulepreload" crossorigin href="./assets/package-BeYhVWvM.js">
+    <link rel="modulepreload" crossorigin href="./assets/errors-D9vyuMar.js">
+    <link rel="modulepreload" crossorigin href="./assets/defaultLocale-CNPGWpMu.js">
+    <link rel="modulepreload" crossorigin href="./assets/precisionRound-Bq_nmf5u.js">
+    <link rel="modulepreload" crossorigin href="./assets/defaultLocale-D5bOh7g6.js">
+    <link rel="modulepreload" crossorigin href="./assets/vega-loader.browser-CLRkNgm7.js">
+    <link rel="modulepreload" crossorigin href="./assets/tooltip-PLkI_UfK.js">
+    <link rel="modulepreload" crossorigin href="./assets/filename-fxG7K_MU.js">
+    <link rel="modulepreload" crossorigin href="./assets/micromark-factory-space-D9Dr-k4J.js">
+    <link rel="modulepreload" crossorigin href="./assets/chunk-YOKDWASO-CaoEAGJk.js">
+    <link rel="stylesheet" crossorigin href="./assets/cells-0PFKL3SH.css">
+    <link rel="stylesheet" crossorigin href="./assets/index--sT8xf-8.css">
+  <marimo-wasm hidden=""></marimo-wasm>
+    <script>
+        if (window.location.protocol === 'file:') {
+            alert('Warning: This file must be served by an HTTP server to function correctly.');
+        }
+    </script>
+    
+    <style>
+        #save-button {
+            display: none !important;
+        }
+        #filename-input {
+            display: none !important;
+        }
+    </style>
+    
+<script data-marimo="true">
+    Object.defineProperty(window, "__MARIMO_EXPORT_CONTEXT__", {
+        value: Object.freeze({
+            trusted: true,
+            notebookCode: "# Copyright 2026 Marimo. All rights reserved.\n# /// script\n# requires-python = \"\u003E=3.12\"\n# dependencies = [\n#     \"marimo\",\n# ]\n# ///\n\nimport marimo\n\n__generated_with = \"0.25.1\"\napp = marimo.App(\n    layout_file=\"data:application/json;base64,eyJ0eXBlIjogInNsaWRlcyIsICJkYXRhIjogeyJjZWxscyI6IFt7fSwge30sIHsidHlwZSI6ICJmcmFnbWVudCIsICJzaG93Q29kZSI6IHRydWV9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9XSwgImRlY2siOiB7fX19\",\n)\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.md(\"\"\"\n    # Layout\n\n    `marimo` provides functions to help you lay out your output, such as\n    in rows and columns, accordions, tabs, and callouts.\n    \"\"\")\n    return\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.md(\"\"\"\n    ## Rows and columns\n\n    Arrange objects into rows and columns with `mo.hstack` and `mo.vstack`.\n    \"\"\")\n    return\n\n\n@app.cell\ndef _(mo):\n    mo.hstack(\n        [mo.ui.text(label=\"hello\"), mo.ui.slider(1, 10, label=\"slider\")],\n        justify=\"start\",\n    )\n    return\n\n\n@app.cell\ndef _(mo):\n    mo.vstack([mo.ui.text(label=\"world\"), mo.ui.number(1, 10, label=\"number\")])\n    return\n\n\n@app.cell\ndef _(mo):\n    grid = mo.vstack(\n        [\n            mo.hstack(\n                [mo.ui.text(label=\"hello\"), mo.ui.slider(1, 10, label=\"slider\")],\n            ),\n            mo.hstack(\n                [mo.ui.text(label=\"world\"), mo.ui.number(1, 10, label=\"number\")],\n            ),\n        ],\n    ).center()\n\n    mo.md(\n        f\"\"\"\n        Combine `mo.hstack` with `mo.vstack` to make grids:\n\n        {grid}\n\n        You can pass anything to `mo.hstack` to `mo.vstack` (including\n        plots!).\n        \"\"\"\n    )\n    return\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.md(\"\"\"\n    **Customization.**\n    The presentation of stacked elements can be customized with some arguments\n    that are best understood by example.\n    \"\"\")\n    return\n\n\n@app.cell\ndef _(mo):\n    justify = mo.ui.dropdown(\n        [\"start\", \"center\", \"end\", \"space-between\", \"space-around\"],\n        value=\"space-between\",\n        label=\"justify\",\n    )\n    align = mo.ui.dropdown(\n        [\"start\", \"center\", \"end\", \"stretch\"], value=\"center\", label=\"align\"\n    )\n    gap = mo.ui.number(start=0, step=0.25, stop=2, value=0.5, label=\"gap\")\n    wrap = mo.ui.checkbox(label=\"wrap\")\n\n    mo.hstack([justify, align, gap, wrap], justify=\"center\")\n    return align, gap, justify, wrap\n\n\n@app.cell\ndef _(mo):\n    size = mo.ui.slider(label=\"box size\", start=60, stop=500)\n    mo.hstack([size], justify=\"center\")\n    return (size,)\n\n\n@app.cell\ndef _(align, boxes, gap, justify, mo, wrap):\n    mo.hstack(\n        boxes,\n        align=align.value,\n        justify=justify.value,\n        gap=gap.value,\n        wrap=wrap.value,\n    )\n    return\n\n\n@app.cell\ndef _(align, boxes, gap, mo):\n    mo.vstack(\n        boxes,\n        align=align.value,\n        gap=gap.value,\n    )\n    return\n\n\n@app.cell\ndef _(mo, size):\n    def create_box(num=1):\n        box_size = size.value + num * 10\n        return mo.Html(\n            f\"\u003Cdiv style='min-width: {box_size}px; min-height: {box_size}px; background-color: orange; text-align: center; line-height: {box_size}px'\u003E{str(num)}\u003C/div\u003E\"\n        )\n\n\n    boxes = [create_box(i) for i in range(1, 5)]\n    return (boxes,)\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.accordion(\n        {\n            \"Documentation: `mo.hstack`\": mo.doc(mo.hstack),\n            \"Documentation: `mo.vstack`\": mo.doc(mo.vstack),\n        }\n    )\n    return\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.md(\"\"\"\n    **Justifying `Html`.** While you can center or right-justify any object\n    using `mo.hstack`, `Html` objects (returned by most marimo\n    functions, and subclassed by most marimo classes) have a shortcut using\n    via their `center`, `right`, and `left` methods.\n    \"\"\")\n    return\n\n\n@app.cell\ndef _(mo):\n    mo.md(\"\"\"\n    This markdown is left-justified.\n    \"\"\")\n    return\n\n\n@app.cell\ndef _(mo):\n    mo.md(\"This markdown is centered.\").center()\n    return\n\n\n@app.cell\ndef _(mo):\n    mo.md(\"This markdown is right-justified.\").right()\n    return\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.accordion(\n        {\n            \"Documentation: `Html.center`\": mo.doc(mo.Html.center),\n            \"Documentation: `Html.right`\": mo.doc(mo.Html.right),\n            \"Documentation: `Html.left`\": mo.doc(mo.Html.left),\n        }\n    )\n    return\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.md(\"\"\"\n    ## Accordion\n\n    Create expandable shelves of content using `mo.accordion`:\n    \"\"\")\n    return\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.md(\"\"\"\n    An accordion can contain multiple items:\n    \"\"\")\n    return\n\n\n@app.cell\ndef _(mo):\n    mo.accordion(\n        {\n            \"Multiple items\": \"By default, only one item can be open at a time\",\n            \"Allow multiple items to be open\": (\n                \"\"\"\n                Use the keyword argument `multiple=True` to allow multiple items\n                to be open at the same time\n                \"\"\"\n            ),\n        }\n    )\n    return\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.md(\"\"\"\n    ## Tabs\n\n    Use `mo.ui.tabs` to display multiple objects in a single tabbed output:\n    \"\"\")\n    return\n\n\n@app.cell\ndef _(mo):\n    _settings = mo.vstack(\n        [\n            mo.md(\"**Edit User**\"),\n            mo.ui.text(label=\"First Name\"),\n            mo.ui.text(label=\"Last Name\"),\n        ]\n    )\n\n    _organization = mo.vstack(\n        [\n            mo.md(\"**Edit Organization**\"),\n            mo.ui.text(label=\"Organization Name\"),\n            mo.ui.number(label=\"Number of employees\", start=0, stop=1000),\n        ]\n    )\n\n    mo.ui.tabs(\n        {\n            \"\ud83e\uddd9\u200d\u2640 User\": _settings,\n            \"\ud83c\udfe2 Organization\": _organization,\n        }\n    )\n    return\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.accordion({\"Documentation: `mo.ui.tabs`\": mo.doc(mo.ui.tabs)})\n    return\n\n\n@app.cell\ndef _(mo):\n    _t = [\n        mo.md(\"**Hello!**\"),\n        mo.md(r\"$f(x)$\"),\n        {\"c\": mo.ui.slider(1, 10), \"d\": (mo.ui.checkbox(), mo.ui.switch())},\n    ]\n\n    mo.md(\n        f\"\"\"\n        ## Tree\n\n        Display a nested structure of lists, dictionaries, and tuples with\n        `mo.tree`:\n\n        {mo.tree(_t)}\n        \"\"\"\n    )\n    return\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.accordion({\"Documentation: `mo.tree`\": mo.doc(mo.tree)})\n    return\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.md(\"\"\"\n    ## Callout\n\n    Turn any markdown or HTML into an emphasized callout with the `callout`\n    method:\n    \"\"\")\n    return\n\n\n@app.cell\ndef _(mo):\n    callout_kind = mo.ui.dropdown(\n        [\"neutral\", \"warn\", \"success\", \"info\", \"danger\"], value=\"neutral\"\n    )\n    return (callout_kind,)\n\n\n@app.cell\ndef _(callout_kind, mo):\n    mo.md(\n        f\"\"\"\n        You can turn any HTML or markdown into an emphasized callout.\n        You can choose from a variety of callout kinds. This one is:\n        {callout_kind}\n        \"\"\"\n    ).callout(kind=callout_kind.value, title=\"This is a callout!\")\n    return\n\n\n@app.cell(hide_code=True)\ndef _(mo):\n    mo.accordion({\"Documentation: `mo.callout`\": mo.doc(mo.callout)})\n    return\n\n\n@app.cell\ndef _():\n    import marimo as mo\n\n    return (mo,)\n\n\nif __name__ == \"__main__\":\n    app.run()\n",
+        }),
+        writable: false,
+        configurable: false,
+    });
+</script>
+<marimo-code hidden="">%23%20Copyright%202026%20Marimo.%20All%20rights%20reserved.%0A%23%20%2F%2F%2F%20script%0A%23%20requires-python%20%3D%20%22%3E%3D3.12%22%0A%23%20dependencies%20%3D%20%5B%0A%23%20%20%20%20%20%22marimo%22%2C%0A%23%20%5D%0A%23%20%2F%2F%2F%0A%0Aimport%20marimo%0A%0A__generated_with%20%3D%20%220.25.1%22%0Aapp%20%3D%20marimo.App(%0A%20%20%20%20layout_file%3D%22data%3Aapplication%2Fjson%3Bbase64%2CeyJ0eXBlIjogInNsaWRlcyIsICJkYXRhIjogeyJjZWxscyI6IFt7fSwge30sIHsidHlwZSI6ICJmcmFnbWVudCIsICJzaG93Q29kZSI6IHRydWV9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9XSwgImRlY2siOiB7fX19%22%2C%0A)%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20%23%20Layout%0A%0A%20%20%20%20%60marimo%60%20provides%20functions%20to%20help%20you%20lay%20out%20your%20output%2C%20such%20as%0A%20%20%20%20in%20rows%20and%20columns%2C%20accordions%2C%20tabs%2C%20and%20callouts.%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20%23%23%20Rows%20and%20columns%0A%0A%20%20%20%20Arrange%20objects%20into%20rows%20and%20columns%20with%20%60mo.hstack%60%20and%20%60mo.vstack%60.%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.hstack(%0A%20%20%20%20%20%20%20%20%5Bmo.ui.text(label%3D%22hello%22)%2C%20mo.ui.slider(1%2C%2010%2C%20label%3D%22slider%22)%5D%2C%0A%20%20%20%20%20%20%20%20justify%3D%22start%22%2C%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.vstack(%5Bmo.ui.text(label%3D%22world%22)%2C%20mo.ui.number(1%2C%2010%2C%20label%3D%22number%22)%5D)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20grid%20%3D%20mo.vstack(%0A%20%20%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20mo.hstack(%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5Bmo.ui.text(label%3D%22hello%22)%2C%20mo.ui.slider(1%2C%2010%2C%20label%3D%22slider%22)%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20mo.hstack(%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5Bmo.ui.text(label%3D%22world%22)%2C%20mo.ui.number(1%2C%2010%2C%20label%3D%22number%22)%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20).center()%0A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20f%22%22%22%0A%20%20%20%20%20%20%20%20Combine%20%60mo.hstack%60%20with%20%60mo.vstack%60%20to%20make%20grids%3A%0A%0A%20%20%20%20%20%20%20%20%7Bgrid%7D%0A%0A%20%20%20%20%20%20%20%20You%20can%20pass%20anything%20to%20%60mo.hstack%60%20to%20%60mo.vstack%60%20(including%0A%20%20%20%20%20%20%20%20plots!).%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20**Customization.**%0A%20%20%20%20The%20presentation%20of%20stacked%20elements%20can%20be%20customized%20with%20some%20arguments%0A%20%20%20%20that%20are%20best%20understood%20by%20example.%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20justify%20%3D%20mo.ui.dropdown(%0A%20%20%20%20%20%20%20%20%5B%22start%22%2C%20%22center%22%2C%20%22end%22%2C%20%22space-between%22%2C%20%22space-around%22%5D%2C%0A%20%20%20%20%20%20%20%20value%3D%22space-between%22%2C%0A%20%20%20%20%20%20%20%20label%3D%22justify%22%2C%0A%20%20%20%20)%0A%20%20%20%20align%20%3D%20mo.ui.dropdown(%0A%20%20%20%20%20%20%20%20%5B%22start%22%2C%20%22center%22%2C%20%22end%22%2C%20%22stretch%22%5D%2C%20value%3D%22center%22%2C%20label%3D%22align%22%0A%20%20%20%20)%0A%20%20%20%20gap%20%3D%20mo.ui.number(start%3D0%2C%20step%3D0.25%2C%20stop%3D2%2C%20value%3D0.5%2C%20label%3D%22gap%22)%0A%20%20%20%20wrap%20%3D%20mo.ui.checkbox(label%3D%22wrap%22)%0A%0A%20%20%20%20mo.hstack(%5Bjustify%2C%20align%2C%20gap%2C%20wrap%5D%2C%20justify%3D%22center%22)%0A%20%20%20%20return%20align%2C%20gap%2C%20justify%2C%20wrap%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20size%20%3D%20mo.ui.slider(label%3D%22box%20size%22%2C%20start%3D60%2C%20stop%3D500)%0A%20%20%20%20mo.hstack(%5Bsize%5D%2C%20justify%3D%22center%22)%0A%20%20%20%20return%20(size%2C)%0A%0A%0A%40app.cell%0Adef%20_(align%2C%20boxes%2C%20gap%2C%20justify%2C%20mo%2C%20wrap)%3A%0A%20%20%20%20mo.hstack(%0A%20%20%20%20%20%20%20%20boxes%2C%0A%20%20%20%20%20%20%20%20align%3Dalign.value%2C%0A%20%20%20%20%20%20%20%20justify%3Djustify.value%2C%0A%20%20%20%20%20%20%20%20gap%3Dgap.value%2C%0A%20%20%20%20%20%20%20%20wrap%3Dwrap.value%2C%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(align%2C%20boxes%2C%20gap%2C%20mo)%3A%0A%20%20%20%20mo.vstack(%0A%20%20%20%20%20%20%20%20boxes%2C%0A%20%20%20%20%20%20%20%20align%3Dalign.value%2C%0A%20%20%20%20%20%20%20%20gap%3Dgap.value%2C%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo%2C%20size)%3A%0A%20%20%20%20def%20create_box(num%3D1)%3A%0A%20%20%20%20%20%20%20%20box_size%20%3D%20size.value%20%2B%20num%20*%2010%0A%20%20%20%20%20%20%20%20return%20mo.Html(%0A%20%20%20%20%20%20%20%20%20%20%20%20f%22%3Cdiv%20style%3D'min-width%3A%20%7Bbox_size%7Dpx%3B%20min-height%3A%20%7Bbox_size%7Dpx%3B%20background-color%3A%20orange%3B%20text-align%3A%20center%3B%20line-height%3A%20%7Bbox_size%7Dpx'%3E%7Bstr(num)%7D%3C%2Fdiv%3E%22%0A%20%20%20%20%20%20%20%20)%0A%0A%0A%20%20%20%20boxes%20%3D%20%5Bcreate_box(i)%20for%20i%20in%20range(1%2C%205)%5D%0A%20%20%20%20return%20(boxes%2C)%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.accordion(%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Documentation%3A%20%60mo.hstack%60%22%3A%20mo.doc(mo.hstack)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Documentation%3A%20%60mo.vstack%60%22%3A%20mo.doc(mo.vstack)%2C%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20**Justifying%20%60Html%60.**%20While%20you%20can%20center%20or%20right-justify%20any%20object%0A%20%20%20%20using%20%60mo.hstack%60%2C%20%60Html%60%20objects%20(returned%20by%20most%20marimo%0A%20%20%20%20functions%2C%20and%20subclassed%20by%20most%20marimo%20classes)%20have%20a%20shortcut%20using%0A%20%20%20%20via%20their%20%60center%60%2C%20%60right%60%2C%20and%20%60left%60%20methods.%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20This%20markdown%20is%20left-justified.%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22This%20markdown%20is%20centered.%22).center()%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22This%20markdown%20is%20right-justified.%22).right()%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.accordion(%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Documentation%3A%20%60Html.center%60%22%3A%20mo.doc(mo.Html.center)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Documentation%3A%20%60Html.right%60%22%3A%20mo.doc(mo.Html.right)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Documentation%3A%20%60Html.left%60%22%3A%20mo.doc(mo.Html.left)%2C%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20%23%23%20Accordion%0A%0A%20%20%20%20Create%20expandable%20shelves%20of%20content%20using%20%60mo.accordion%60%3A%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20An%20accordion%20can%20contain%20multiple%20items%3A%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.accordion(%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Multiple%20items%22%3A%20%22By%20default%2C%20only%20one%20item%20can%20be%20open%20at%20a%20time%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Allow%20multiple%20items%20to%20be%20open%22%3A%20(%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Use%20the%20keyword%20argument%20%60multiple%3DTrue%60%20to%20allow%20multiple%20items%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20to%20be%20open%20at%20the%20same%20time%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20%23%23%20Tabs%0A%0A%20%20%20%20Use%20%60mo.ui.tabs%60%20to%20display%20multiple%20objects%20in%20a%20single%20tabbed%20output%3A%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20_settings%20%3D%20mo.vstack(%0A%20%20%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20mo.md(%22**Edit%20User**%22)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20mo.ui.text(label%3D%22First%20Name%22)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20mo.ui.text(label%3D%22Last%20Name%22)%2C%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20)%0A%0A%20%20%20%20_organization%20%3D%20mo.vstack(%0A%20%20%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20mo.md(%22**Edit%20Organization**%22)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20mo.ui.text(label%3D%22Organization%20Name%22)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20mo.ui.number(label%3D%22Number%20of%20employees%22%2C%20start%3D0%2C%20stop%3D1000)%2C%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20)%0A%0A%20%20%20%20mo.ui.tabs(%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22%F0%9F%A7%99%E2%80%8D%E2%99%80%20User%22%3A%20_settings%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22%F0%9F%8F%A2%20Organization%22%3A%20_organization%2C%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.accordion(%7B%22Documentation%3A%20%60mo.ui.tabs%60%22%3A%20mo.doc(mo.ui.tabs)%7D)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20_t%20%3D%20%5B%0A%20%20%20%20%20%20%20%20mo.md(%22**Hello!**%22)%2C%0A%20%20%20%20%20%20%20%20mo.md(r%22%24f(x)%24%22)%2C%0A%20%20%20%20%20%20%20%20%7B%22c%22%3A%20mo.ui.slider(1%2C%2010)%2C%20%22d%22%3A%20(mo.ui.checkbox()%2C%20mo.ui.switch())%7D%2C%0A%20%20%20%20%5D%0A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20f%22%22%22%0A%20%20%20%20%20%20%20%20%23%23%20Tree%0A%0A%20%20%20%20%20%20%20%20Display%20a%20nested%20structure%20of%20lists%2C%20dictionaries%2C%20and%20tuples%20with%0A%20%20%20%20%20%20%20%20%60mo.tree%60%3A%0A%0A%20%20%20%20%20%20%20%20%7Bmo.tree(_t)%7D%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.accordion(%7B%22Documentation%3A%20%60mo.tree%60%22%3A%20mo.doc(mo.tree)%7D)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20%23%23%20Callout%0A%0A%20%20%20%20Turn%20any%20markdown%20or%20HTML%20into%20an%20emphasized%20callout%20with%20the%20%60callout%60%0A%20%20%20%20method%3A%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20callout_kind%20%3D%20mo.ui.dropdown(%0A%20%20%20%20%20%20%20%20%5B%22neutral%22%2C%20%22warn%22%2C%20%22success%22%2C%20%22info%22%2C%20%22danger%22%5D%2C%20value%3D%22neutral%22%0A%20%20%20%20)%0A%20%20%20%20return%20(callout_kind%2C)%0A%0A%0A%40app.cell%0Adef%20_(callout_kind%2C%20mo)%3A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20f%22%22%22%0A%20%20%20%20%20%20%20%20You%20can%20turn%20any%20HTML%20or%20markdown%20into%20an%20emphasized%20callout.%0A%20%20%20%20%20%20%20%20You%20can%20choose%20from%20a%20variety%20of%20callout%20kinds.%20This%20one%20is%3A%0A%20%20%20%20%20%20%20%20%7Bcallout_kind%7D%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20).callout(kind%3Dcallout_kind.value%2C%20title%3D%22This%20is%20a%20callout!%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.accordion(%7B%22Documentation%3A%20%60mo.callout%60%22%3A%20mo.doc(mo.callout)%7D)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20import%20marimo%20as%20mo%0A%0A%20%20%20%20return%20(mo%2C)%0A%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20app.run()%0A</marimo-code></head>
+  <body>
+    <div id="root"></div>
+    <script data-marimo="true">
+      Object.defineProperty(window, "__MARIMO_MOUNT_CONFIG__", {
+        value: Object.freeze({
+            "filename": "notebook.py",
+            "cwd": "",
+            "lspWorkspace": null,
+            "mode": "read",
+            "version": "0.25.1",
+            "serverToken": "unused",
+            "config": {"ai": {"allow_provider_config": true, "custom_providers": {}, "enabled": true, "models": {"custom_models": [], "displayed_models": []}}, "completion": {"activate_on_typing": true, "auto_close_pairs": true, "copilot": false, "signature_hint_on_typing": false}, "diagnostics": {"sql_linter": true}, "display": {"cell_output": "below", "code_editor_font_size": 14, "code_lens": true, "dataframes": "rich", "default_table_max_columns": 50, "default_table_page_size": 10, "default_width": "medium", "reference_highlighting": true, "theme": "light"}, "formatting": {"line_length": 79}, "keymap": {"overrides": {}, "preset": "default"}, "language_servers": {"pylsp": {"enable_flake8": false, "enable_mypy": true, "enable_pydocstyle": false, "enable_pyflakes": false, "enable_pylint": false, "enable_ruff": true, "enabled": false}}, "mcp": {"mcpServers": {}, "presets": []}, "package_management": {"manager": "uv"}, "runtime": {"auto_instantiate": false, "auto_reload": "off", "default_csv_encoding": "utf-8", "default_sql_output": "auto", "on_cell_change": "autorun", "output_max_bytes": 8000000, "reactive_tests": true, "show_tracebacks": false, "std_stream_max_bytes": 1000000, "watcher_on_save": "lazy"}, "save": {"autosave": "off", "autosave_delay": 1000, "format_on_save": false}, "server": {"browser": "default", "follow_symlink": false}, "snippets": {"custom_paths": [], "include_default_snippets": true}},
+            "configOverrides": {},
+            "appConfig": {"layout_file": "data:application/json;base64,eyJ0eXBlIjogInNsaWRlcyIsICJkYXRhIjogeyJjZWxscyI6IFt7fSwge30sIHsidHlwZSI6ICJmcmFnbWVudCIsICJzaG93Q29kZSI6IHRydWV9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9LCB7fSwge30sIHt9XSwgImRlY2siOiB7fX19", "sql_output": "auto", "width": "compact"},
+            "layout": {"data": {"cells": [{}, {}, {"showCode": true, "type": "fragment"}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}], "deck": {}}, "type": "slides"},
+            "view": {"showAppCode": false},
+            "notebook": null,
+            "session": null,
+            "runtimeConfig": null
+        }),
+        writable: false,
+        configurable: false,
+      });
+    </script>
+  </body>
+</html>
