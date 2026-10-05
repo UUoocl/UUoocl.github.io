@@ -17,7 +17,7 @@
         "siteId": "uuoocl",
         "scriptUrl": ""
       },
-      "order": 30
+      "order": 40
     },
     "dg-filetree": {
       "order": 10
@@ -26,7 +26,7 @@
       "order": 20
     },
     "dg-math": {
-      "order": 40
+      "order": 30
     },
     "dg-search": {
       "order": 50
