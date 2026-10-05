@@ -17,13 +17,13 @@
         "siteId": "uuoocl",
         "scriptUrl": ""
       },
-      "order": 20
+      "order": 30
     },
     "dg-filetree": {
       "order": 10
     },
     "dg-link-preview": {
-      "order": 30
+      "order": 20
     },
     "dg-math": {
       "order": 40
