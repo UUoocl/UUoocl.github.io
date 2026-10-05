@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/publishing-slides/","title":"Publishing Slides","tags":["presentation","slides"],"noteIcon":"default","created":"2026-10-04T19:45:53.687-04:00","updated":"2026-10-04T20:58:17.292-04:00","dg-note-properties":{"title":"Publishing Slides","tags":["presentation","slides"]}}
+{"dg-publish":true,"permalink":"/publishing-slides/","title":"Publishing Slides","tags":["presentation","slides"],"noteIcon":"default","created":"2026-10-04T19:45:53.687-04:00","updated":"2026-10-04T21:14:01.449-04:00","dg-note-properties":{"title":"Publishing Slides","tags":["presentation","slides"]}}
 ---
 
 If you love Obsidian as your digital brain, you already know the power of connecting your thoughts. But sometimes a flat wall of text doesn't cut it. When you need to explain an architecture, deliver a tutorial, or summarize key takeaways, **slides just work better**.
@@ -236,6 +236,8 @@ Your readers will now see an interactive, full-screen Reveal.js presentation emb
 
 # Slides.com Example
 
+Slides.com is a visual interface for Reveal.js slides.   
+
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; border: 1px solid #333;">
   <iframe 
     src="/slides/slides_arrows-lines-27ae9e/" 
@@ -245,6 +247,8 @@ Your readers will now see an interactive, full-screen Reveal.js presentation emb
 </div>
 
 # Marimo Slides Example
+
+Marimo is a python notebook analysis tool that can export interactive Reveal.js slides. These slides can be copied to the local digital garden folder and embedded in notes.  
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; border: 1px solid #333;">
   <iframe 
