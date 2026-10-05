@@ -16,7 +16,23 @@
         "provider": "goatcounter",
         "siteId": "uuoocl",
         "scriptUrl": ""
-      }
+      },
+      "order": 20
+    },
+    "dg-filetree": {
+      "order": 10
+    },
+    "dg-link-preview": {
+      "order": 30
+    },
+    "dg-math": {
+      "order": 40
+    },
+    "dg-search": {
+      "order": 50
+    },
+    "dg-timestamps": {
+      "order": 60
     }
   }
 }
