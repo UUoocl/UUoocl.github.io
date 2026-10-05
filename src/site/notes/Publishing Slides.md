@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/publishing-slides/","title":"Publishing Slides","tags":["presentation","slides"],"noteIcon":"default","created":"2026-10-04T19:45:53.687-04:00","updated":"2026-10-04T20:57:30.966-04:00","dg-note-properties":{"title":"Publishing Slides","tags":["presentation","slides"]}}
+{"dg-publish":true,"permalink":"/publishing-slides/","title":"Publishing Slides","tags":["presentation","slides"],"noteIcon":"default","created":"2026-10-04T19:45:53.687-04:00","updated":"2026-10-04T20:58:17.292-04:00","dg-note-properties":{"title":"Publishing Slides","tags":["presentation","slides"]}}
 ---
 
 If you love Obsidian as your digital brain, you already know the power of connecting your thoughts. But sometimes a flat wall of text doesn't cut it. When you need to explain an architecture, deliver a tutorial, or summarize key takeaways, **slides just work better**.
@@ -216,7 +216,7 @@ Here are the detailed references and background context for the slides above...
 2. Run:
 
 ```
-Digital Garden: Publish Single Note
+Digital Garden: Publish Active Note
 ```
 
 3. Digital Garden commits the Markdown note to GitHub via the API, triggering Eleventy to rebuild the site.
