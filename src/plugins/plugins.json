@@ -17,7 +17,7 @@
         "siteId": "uuoocl",
         "scriptUrl": ""
       },
-      "order": 50
+      "order": 60
     },
     "dg-filetree": {
       "order": 10
@@ -32,7 +32,7 @@
       "order": 40
     },
     "dg-timestamps": {
-      "order": 60
+      "order": 50
     }
   }
 }
