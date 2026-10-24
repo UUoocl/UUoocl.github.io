@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Cables/OBS","permalink":"/cables/obs/","title":"Connecting OBS","tags":["cables","obs-studio","live-streaming","websockets","interactive-graphics"],"noteIcon":"default","created":"2026-10-24T19:20:06.512-04:00","updated":"2026-10-24T19:34:32.941-04:00","dg-note-properties":{"title":"Connecting OBS","tags":["cables","obs-studio","live-streaming","websockets","interactive-graphics"]}}
+{"dg-publish":true,"dg-path":"Cables/OBS","permalink":"/cables/obs/","title":"Connecting to OBS","tags":["cables","obs-studio","live-streaming","websockets","interactive-graphics"],"noteIcon":"default","created":"2026-10-24T19:20:06.512-04:00","updated":"2026-10-24T19:50:48.296-04:00","dg-note-properties":{"title":"Connecting to OBS","tags":["cables","obs-studio","live-streaming","websockets","interactive-graphics"]}}
 ---
 
 Turn your  [Cables.gl](https://cables.gl)  patch into an OBS controller without **browser sandbox restrictions**.
