@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Obsidian/SlidesExtended","permalink":"/obsidian/slides-extended/","title":"Add Slide IDs","hide":"true","pinned":true,"noteIcon":"2","created":"2026-10-05T19:34:14.064-04:00","updated":"2026-10-05T20:03:20.093-04:00","dg-note-properties":{"title":"Add Slide IDs","tags":null}}
+{"dg-publish":true,"dg-path":"Obsidian/SlidesExtended","permalink":"/obsidian/slides-extended/","title":"Add Slide IDs","hide":"false","pinned":true,"noteIcon":"2","created":"2026-10-05T19:34:14.064-04:00","updated":"2026-10-24T19:55:45.784-04:00","dg-note-properties":{"title":"Add Slide IDs","tags":null}}
 ---
 
 
